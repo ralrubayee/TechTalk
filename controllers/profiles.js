@@ -1,5 +1,4 @@
 import { Profile } from '../models/profile.js'
-import {Todo} from '../models/todo.js'
 
 function index(req, res) {
   Profile.find({})
@@ -18,26 +17,27 @@ const show = async (req, res) => {
     return res.status(500).json(err)
   }
 }
-
-
-const create = async (req, res) => {
+const createTodo = async (req, res) => {
   try {
-    req.body.added_by = req.user.profile
-    const todo = await new Todo(req.body)
-    await todo.save()
-    await Profile.updateOne(
-      { _id: req.user.profile },
-      { $push: { todos: todo } }
-    )
-    return res.status(201).json(todo)
+    req.body.created_by = req.user.profile
+    const profile = await Profile.findById(req.user.profile)
+    profile.todos.push(req.body)
+    await profile.save()
+    const newtodo = profile.todos[profile.todos.length - 1]
+
+    return res.status(201).json(newtodo)
   } catch (err) {
-    return res.status(500).json(err)
+    res.status(500).json(err)
   }
 }
 
 
+
+
+
+
 export { 
   index,
-  create,
-  show
+  createTodo as create,
+  show,
 }

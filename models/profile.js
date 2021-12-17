@@ -1,5 +1,21 @@
 import mongoose from 'mongoose'
 
+const todoSchema = new mongoose.Schema({
+  todo_text: {
+    type: String,
+    required: true
+  }, 
+  completed: {
+    type: Boolean,
+    default: false,
+  },
+  created_by:{ 
+    type: mongoose.Schema.Types.ObjectId, 
+    ref: 'Profile',
+  },
+    })
+  
+
 const profileSchema = new mongoose.Schema({
   email: {type: String, required: true, lowercase: true, unique: true},
   name: String,
@@ -25,11 +41,8 @@ const profileSchema = new mongoose.Schema({
       ref: 'Post'
     }
   ],
-  todo: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Todo' 
-    }
+  todos: [
+    todoSchema
   ]
 },{
     timestamps: true,
