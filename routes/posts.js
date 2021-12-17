@@ -8,11 +8,13 @@ const router = Router()
 router.get('/', postCtrl.index)
 router.get('/:id', postCtrl.show)
 
+
 // ========= Protected Routes ========= 
 router.use(decodeUserFromToken)
 router.post('/', checkAuth, postCtrl.create)
 router.put('/:id', checkAuth, postCtrl.update)
 router.delete('/:id', checkAuth, postCtrl.delete)
+router.post('/:id/comments',checkAuth, postCtrl.createComment)
 
 export {
   router

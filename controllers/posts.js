@@ -27,9 +27,9 @@ const index = async (req, res) => {
   } catch (err) {
     return res.status(500).json(err)
   }
- }
+}
 
- const show = async (req, res) => {
+  const show = async (req, res) => {
   try {
     const post = await Post.findById(req.params.id)
       .populate('added_by')
@@ -45,7 +45,7 @@ const update = async (req, res) => {
     const updatedPost = await Post.findByIdAndUpdate(
       req.params.id,
       req.body,
-     { new: true }
+    { new: true }
     ).populate('added_by')
     return res.status(200).json(updatedPost)
   } catch (err) {
@@ -64,6 +64,22 @@ const deletePost = async (req, res) => {
     return res.status(500).json(err)
   }
 }
+const createComment = async (req, res) => {
+  try {
+    req.body.commenter = req.user.profile
+    const post = await Post.findById(req.params.id)
+    post.comments.push(req.body)
+    await post.save()
+    const newComment = post.comments[post.comments.length - 1]
+
+    const profile = await Profile.findById(req.user.profile)
+    newComment.commenter = profile
+
+    return res.status(201).json(newComment)
+  } catch (err) {
+    res.status(500).json(err)
+  }
+}
 
 
 export {
@@ -71,5 +87,6 @@ export {
   index,
   show,
   update,
-  deletePost as delete 
+  deletePost as delete,
+  createComment, 
 }
