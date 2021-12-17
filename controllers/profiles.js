@@ -20,24 +20,54 @@ const show = async (req, res) => {
 }
 
 
-const create = async (req, res) => {
+// const create = async (req, res) => {
+//   try {
+//     const profile = await Profile.findById(req.params.id)
+//     req.body.created_by = req.user.profile
+//         profile.todos.push(req.body)
+
+
+//   }
+// }
+
+// const createTodo = async (req, res) => {
+//   try {
+//     req.body.created_by = req.user.profile
+//     const profile = await Profile.findById(req.params.id)
+//     profile.todos.push(req.body.todo_text)
+//     await profile.save()
+//     const newTodo = profile.todos[profile.todos.length - 1]
+//       newTodo.created_by = profile
+
+//     return res.status(201).json(newTodo)
+//   } catch (err) {
+//     res.status(500).json(err)
+//   }
+// }
+
+const createTodo = async (req, res) => {
   try {
-    req.body.added_by = req.user.profile
-    const todo = await new Todo(req.body)
-    await todo.save()
-    await Profile.updateOne(
-      { _id: req.user.profile },
-      { $push: { todos: todo } }
-    )
-    return res.status(201).json(todo)
+    console.log('workkkkk',req.user.profile)
+    req.body.created_by = req.user.profile
+    const profile = await Profile.findById(req.user.profile)
+    profile.todos.push(req.body)
+    await profile.save()
+    const newtodo = profile.todos[profile.todos.length - 1]
+
+    return res.status(201).json(newtodo)
   } catch (err) {
-    return res.status(500).json(err)
+    res.status(500).json(err)
   }
 }
 
 
+
+
+
+
 export { 
   index,
-  create,
-  show
+  // create,
+  createTodo as create,
+  show,
 }

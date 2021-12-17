@@ -17,4 +17,6 @@ created_by:{
 
 const Todo = mongoose.model('Todo', todoSchema)
 
-export {Todo}
+export {
+  Todo
+}
