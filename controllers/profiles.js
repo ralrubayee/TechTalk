@@ -44,11 +44,30 @@ const deleteTodo = async (req, res) => {
   }
 }
 
+const update = async (req, res) => {
+  try {
+    const updatedProfile = await Profile.findById(req.user.profile)
+      .populate('todos.created_by')
+
+    const idx = updatedProfile.todos.findIndex(
+      (todo) => todo._id.equals(req.params.todoId)
+    )
+    updatedProfile.todos[idx].completed = true
+
+    await updatedProfile.save()
+    return res.status(200).json(updatedProfile)
+
+  } catch (err) {
+    res.status(500).json(err)
+  }
+}
+
 
 
 export { 
   index,
   createTodo as create,
   show,
+  update,
   deleteTodo as delete
 }
