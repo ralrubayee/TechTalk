@@ -7,9 +7,12 @@ const router = Router()
 /*---------- Public Routes ----------*/
 
 
+router.get('/:id', profilesCtrl.show )
 
 /*---------- Protected Routes ----------*/
 router.use(decodeUserFromToken)
 router.get('/', checkAuth, profilesCtrl.index)
+// router.get('/:id/todo', checkAuth, profilesCtrl.create)
+
 
 export { router }
