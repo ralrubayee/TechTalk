@@ -24,6 +24,12 @@ const profileSchema = new mongoose.Schema({
       ref: 'Post'
     }
   ],
+  todo: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Todo' 
+    }
+  ]
 },{
     timestamps: true,
 })
