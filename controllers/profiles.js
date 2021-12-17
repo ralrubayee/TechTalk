@@ -17,6 +17,7 @@ const show = async (req, res) => {
     return res.status(500).json(err)
   }
 }
+
 const createTodo = async (req, res) => {
   try {
     req.body.created_by = req.user.profile
@@ -31,8 +32,17 @@ const createTodo = async (req, res) => {
   }
 }
 
+const deleteTodo = async (req, res) => {
+  try {
+    const profile = await Profile.findById(req.user.profile)
+    profile.todos.remove({ _id: req.params.todoId })
 
-
+    await profile.save()
+    return res.status(204).end()
+  } catch (err) {
+    res.status(500).json(err)
+  }
+}
 
 
 
@@ -40,4 +50,5 @@ export {
   index,
   createTodo as create,
   show,
+  deleteTodo as delete
 }

@@ -13,6 +13,7 @@ router.use(decodeUserFromToken)
 router.get('/', checkAuth, profilesCtrl.index)
 router.get('/:id', checkAuth, profilesCtrl.show )
 router.post('/todos',checkAuth, profilesCtrl.create)
-
+// router.put('/todos/:id', checkAuth, profilesCtrl.update)
+router.delete('/todos/:todoId',checkAuth, profilesCtrl.delete )
 export { router }
 
