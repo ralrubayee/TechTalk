@@ -30,7 +30,7 @@ const profileSchema = new mongoose.Schema({
   name: String,
   avatar: {
     type: String,
-    required: true
+    required: false
   },
   github: {
     type: String,
@@ -53,7 +53,11 @@ const profileSchema = new mongoose.Schema({
   todos: [
     todoSchema
   ],
-  jobs: [jobSchema]
+  jobs: [jobSchema],
+  friends: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Profile'
+  }]
 },{
     timestamps: true,
 })
