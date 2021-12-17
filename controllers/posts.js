@@ -41,11 +41,11 @@ const index = async (req, res) => {
 }
 const update = async (req, res) => {
   try {
-    const updateData = { text: `${req.body.text}` }
+    // const updateData = { text: `${req.body.text}` }
     const updatedPost = await Post.findByIdAndUpdate(
       req.params.id,
-      updateData,
-      // { new: true }
+      req.body,
+     { new: true }
     ).populate('added_by')
     return res.status(200).json(updatedPost)
   } catch (err) {
@@ -53,6 +53,17 @@ const update = async (req, res) => {
   }
 }
 
+const deletePost = async (req, res) => {
+  try {
+    await Post.findByIdAndDelete(req.params.id)
+    const profile = await Profile.findById(req.user.profile)
+    profile.posts.remove({ _id: req.params.id })
+    await profile.save()
+    return res.status(204).end()
+  } catch (err) {
+    return res.status(500).json(err)
+  }
+}
 
 
 export {
@@ -60,4 +71,5 @@ export {
   index,
   show,
   update,
+  deletePost as delete 
 }
