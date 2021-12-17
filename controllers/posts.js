@@ -39,9 +39,25 @@ const index = async (req, res) => {
     return res.status(500).json(err)
   }
 }
+const update = async (req, res) => {
+  try {
+    const updateData = { text: `${req.body.text}` }
+    const updatedPost = await Post.findByIdAndUpdate(
+      req.params.id,
+      updateData,
+      // { new: true }
+    ).populate('added_by')
+    return res.status(200).json(updatedPost)
+  } catch (err) {
+    return res.status(500).json(err)
+  }
+}
+
+
 
 export {
   create,
   index,
   show,
+  update,
 }
