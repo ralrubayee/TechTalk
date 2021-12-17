@@ -4,30 +4,30 @@ import jwt from 'jsonwebtoken'
 
 function signup(req, res) {
   Profile.findOne({ email: req.body.email })
-  .then(profile => {
-    if (profile) {
-      throw new Error('Account already exists')
-    } else if (!process.env.SECRET){
-      throw new Error('no SECRET in .env file')
-    } else {
-      Profile.create(req.body)
-      .then(newProfile => {
-        // newUser.profile = newProfile._id
-        User.create(req.body)
-        .then(user => {
-          const token = createJWT(user)
-          res.status(200).json({ token })
-        })
-        .catch(err => {
-          Profile.findByIdAndDelete(newProfile._id)
-          res.status(500).json({err: err.errmsg})
-        })
-      })
-    }
-  })
-  .catch(err => {
-    res.status(500).json({err: err.message})
-  })
+    .then(profile => {
+      if (profile) {
+        throw new Error('Account already exists')
+      } else if (!process.env.SECRET) {
+        throw new Error('no SECRET in .env file')
+      } else {
+        Profile.create(req.body)
+          .then(newProfile => {
+            req.body.profile = newProfile._id
+            User.create(req.body)
+              .then(user => {
+                const token = createJWT(user)
+                res.status(200).json({ token })
+              })
+              .catch(err => {
+                Profile.findByIdAndDelete(newProfile._id)
+                res.status(500).json({ err: err.errmsg })
+              })
+          })
+      }
+    })
+    .catch(err => {
+      res.status(500).json({ err: err.message })
+    })
 }
 
 function login(req, res) {
