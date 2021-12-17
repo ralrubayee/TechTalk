@@ -7,6 +7,7 @@ import cors from 'cors'
 
 import { router as postsRouter } from './routes/posts.js'
 import { router as profilesRouter } from './routes/profiles.js'
+import { router as jobsRouter } from './routes/jobs.js'
 import { router as authRouter } from './routes/auth.js'
 
 import('./config/database.js')
@@ -24,6 +25,7 @@ app.use(express.json())
 
 app.use('/api/profiles', profilesRouter)
 app.use('/api/posts', postsRouter )
+app.use('/api/jobs', jobsRouter )
 app.use('/api/auth', authRouter)
 
 app.get('/*', function (req, res) {

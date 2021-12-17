@@ -1,5 +1,14 @@
 import mongoose from 'mongoose'
 
+const jobSchema = new mongoose.Schema({
+  name: String,
+  publication_date:	String,
+  location:	String,
+  level: String,
+  url: String,
+  company: String,
+})
+
 const todoSchema = new mongoose.Schema({
   todo_text: {
     type: String,
@@ -43,7 +52,8 @@ const profileSchema = new mongoose.Schema({
   ],
   todos: [
     todoSchema
-  ]
+  ],
+  jobs: [jobSchema]
 },{
     timestamps: true,
 })
