@@ -62,7 +62,18 @@ const update = async (req, res) => {
   }
 }
 
+const addFriend = async (req, res) => {
+  try{
+    const myProfile = await Profile.findById(req.user.profile)
+    myProfile.friends.push(req.body)
 
+    await myProfile.save()
+    return res.status(200).json(myProfile)
+
+  }catch(err) {
+    res.status(500).json(err)
+  }
+}
 
 export { 
   index,
@@ -70,4 +81,5 @@ export {
   show,
   update,
   deleteTodo as delete,
+  addFriend
 }
