@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import * as profileService from '../../services/profileService'
+import ProfileCard from '../Profiles/ProfileCard'
 
 const Profiles = () => {
   const [profiles, setProfiles] = useState([])
@@ -9,20 +10,21 @@ const Profiles = () => {
     .then(profiles => setProfiles(profiles))
   }, [])
 
+  const profileList = profiles.map((ele, idx)=> {
+    return (
+      <ProfileCard
+        img={ele.avatar}
+        name={ele.name}
+        key={idx}
+      />
+    )
+  })
+
   return (
     <>
-      <h1>Hello. This is a list of all the profiles.</h1>
-      {profiles.length ? 
-        <>
-          {profiles.map(profile=>
-            <p key={profile._id}>{profile.name}</p>
-          )}
-        </>
-      :
-        <p>No profiles yet</p>
-      }
+    {profileList}
     </>
   )
 }
- 
+
 export default Profiles
