@@ -63,11 +63,10 @@ const update = async (req, res) => {
 }
 
 
-
 export { 
   index,
   createTodo as create,
   show,
   update,
-  deleteTodo as delete
+  deleteTodo as delete,
 }

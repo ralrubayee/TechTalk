@@ -15,5 +15,8 @@ router.get('/:id', checkAuth, profilesCtrl.show )
 router.post('/todos',checkAuth, profilesCtrl.create)
 router.put('/todos/:todoId', checkAuth, profilesCtrl.update)
 router.delete('/todos/:todoId',checkAuth, profilesCtrl.delete )
+
+
+
 export { router }
 
