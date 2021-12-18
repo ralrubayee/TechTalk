@@ -65,7 +65,8 @@ const update = async (req, res) => {
 const addFriend = async (req, res) => {
   try{
     const myProfile = await Profile.findById(req.user.profile)
-    myProfile.friends.push(req.body)
+    const profile = await Profile.findById(req.params.id)
+    myProfile.friends.push(profile)
 
     await myProfile.save()
     return res.status(200).json(myProfile)
@@ -74,6 +75,8 @@ const addFriend = async (req, res) => {
     res.status(500).json(err)
   }
 }
+
+
 
 export { 
   index,
