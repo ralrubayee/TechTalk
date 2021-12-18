@@ -54,7 +54,6 @@ const profileSchema = new mongoose.Schema({
     todoSchema
   ],
   jobs: [jobSchema],
-  friends: [],
 },{
     timestamps: true,
 })
