@@ -6,9 +6,10 @@ import { getAllPosts } from '../services/postService'
 // Components
 import PostCard from '../components/Post/PostCard'
 import CreatePost from './CreatePost/CreatePost'
+import { process_params } from 'express/lib/router'
 
 
-const PostList = () => {
+const PostList = (props) => {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
@@ -23,7 +24,7 @@ const PostList = () => {
   return (
     <div>
       <h1>Posts!</h1>
-      <CreatePost/>
+      <CreatePost user={props.user}/>
       {posts?.map((post) => (
         <PostCard
           post={post}
