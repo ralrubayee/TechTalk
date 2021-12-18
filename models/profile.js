@@ -54,7 +54,12 @@ const profileSchema = new mongoose.Schema({
     todoSchema
   ],
   jobs: [jobSchema],
-  friends: []
+  friends: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'Profile'
+    }
+  ]
 },{
     timestamps: true,
 })
