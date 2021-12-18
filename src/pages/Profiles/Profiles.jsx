@@ -10,13 +10,16 @@ const Profiles = () => {
     .then(profiles => setProfiles(profiles))
   }, [])
 
+
   const profileList = profiles.map((ele, idx)=> {
+    console.log("loggg",profileService.addFriend(profiles.id))
     return (
       <ProfileCard
         profileId={ele._id}
         img={ele.avatar}
         name={ele.name}
         key={idx}
+        onClick={()=> profileService.addFriend(ele._id)}
       />
     )
   })
