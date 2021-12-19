@@ -11,9 +11,7 @@ const Profiles = (props) => {
   }, [])
 
   const myProfile = profiles.filter(profile => {
-    if (profile._id === props.user.profile) {
-      return profile
-    }
+    return (profile._id === props.user.profile)
   })
 
   const profileList = profiles.map((ele, idx)=> {
