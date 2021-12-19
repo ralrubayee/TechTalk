@@ -6,7 +6,6 @@ import { getAllPosts } from '../services/postService'
 // Components
 import PostCard from '../components/Post/PostCard'
 import CreatePost from './CreatePost/CreatePost'
-import { process_params } from 'express/lib/router'
 
 
 const PostList = (props) => {
