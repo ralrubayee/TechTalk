@@ -13,7 +13,7 @@ const Profiles = (props) => {
   const myProfile = profiles.filter(profile => {
     return (profile._id === props.user.profile)
   })
-
+console.log("errorrrr", myProfile)
   const profileList = profiles.map((ele, idx)=> {
     console.log("my id", props.user.profile)
     return (
