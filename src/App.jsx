@@ -8,6 +8,7 @@ import Profiles from './pages/Profiles/Profiles'
 import PostList from './pages/PostList'
 import * as authService from './services/authService'
 import Jobs from './pages/Jobs/Jobs'
+import ProfileInfo from './pages/Profiles/ProfileInfo'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -47,6 +48,10 @@ const App = () => {
         <Route
           path="/jobs"
           element={user ? <Jobs user={user}/> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/profile/:id"
+          element={user ? <ProfileInfo user={user}/> : <Navigate to="/login" />}
         />
       </Routes>
     </>
