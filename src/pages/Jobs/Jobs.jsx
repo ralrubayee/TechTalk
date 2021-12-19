@@ -1,33 +1,27 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
 
+
 // Components
-import JobCard from './JobCrad'
+import JobCard from './JobCard'
 //Services
 import * as jobService  from '../../services/jobService'
 
   const Jobs = (props) => {
   // const navigate = useNavigate()
-
+  const [jobs, setJobs]= useState([])
   const searchJob = async (e) => {
     e.preventDefault()
     console.log(e.target.value)
     try {
-      const jobs = await jobService.getAllJobs(e.target.value)
-      console.log(jobs) 
+      const data = await jobService.getAllJobs(e.target.value)
+      setJobs(data.results)
     } catch (error) {
       throw error
     }
   }
-
-  // const jobList= jobs.map((ele, idx)=>{
-  //   return(
-  //     // <JobCard 
-  //     <h1>Jobs here</h1>
-  //     // />
-  //   )
-  // })
-
+  console.log("line22", jobs);
+  
   return (
     <div className="layout">
     <select name="jobs" onChange={searchJob}>
@@ -35,7 +29,11 @@ import * as jobService  from '../../services/jobService'
       <option value="IT">IT</option>
       <option value="Software Engineer">Software Engineer</option>
     </select>
-   
+    {jobs.map((job)=>(
+      <JobCard 
+      job={job}
+      />
+    ))}
     
     </div>
   )
