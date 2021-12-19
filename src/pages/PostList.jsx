@@ -10,7 +10,6 @@ import CreatePost from './CreatePost/CreatePost'
 
 const PostList = (props) => {
   const [posts, setPosts] = useState([])
-
   useEffect(() => {
     const fetchAllPosts = async () => {
       const postData = await getAllPosts()
@@ -19,7 +18,7 @@ const PostList = (props) => {
     fetchAllPosts()
     return () => { setPosts([]) } 
   }, [])
-
+  console.log('heyyy', posts);
   return (
     <div>
       <h1>Posts!</h1>
@@ -28,8 +27,8 @@ const PostList = (props) => {
         <PostCard
           post={post}
           key={post._id}
-        />
-      ))}
+          />
+          ))}
     </div>
   )
 }
