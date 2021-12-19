@@ -16,9 +16,6 @@ const Profiles = (props) => {
     }
   })
 
-  // console.log("myProfile", myProfile)
-
-
   const profileList = profiles.map((ele, idx)=> {
     console.log("my id", props.user.profile)
     return (
@@ -28,8 +25,7 @@ const Profiles = (props) => {
         name={ele.name}
         key={idx}
         onClick={()=> profileService.addFriend(ele._id)}
-        myfriends={myProfile[0].friends}
-        users={profiles.id}
+        myFriends={myProfile[0].friends}
       />
     )
   })
