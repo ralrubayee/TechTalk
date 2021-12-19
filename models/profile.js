@@ -31,7 +31,7 @@ const profileSchema = new mongoose.Schema(
 		name: String,
 		avatar: {
 			type: String,
-			default: null,
+			required:true,
 		},
 		github: {
 			type: String,
