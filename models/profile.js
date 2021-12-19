@@ -25,44 +25,45 @@ const todoSchema = new mongoose.Schema({
     })
   
 
-const profileSchema = new mongoose.Schema({
-  email: {type: String, required: true, lowercase: true, unique: true},
-  name: String,
-  avatar: {
-    type: String,
-    required: false
-  },
-  github: {
-    type: String,
-    default: null
-  },
-  linkedin: {
-    type: String,
-    default: null
-  },
-  bio: {
-    type: String,
-    default: null
-  },
-  posts: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Post'
-    }
-  ],
-  todos: [
-    todoSchema
-  ],
-  jobs: [jobSchema],
-  friends: [
-    {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Profile'
-    }
-  ]
-},{
-    timestamps: true,
-})
+const profileSchema = new mongoose.Schema(
+	{
+		email: { type: String, required: true, lowercase: true, unique: true },
+		name: String,
+		avatar: {
+			type: String,
+			default: null,
+		},
+		github: {
+			type: String,
+			default: null,
+		},
+		linkedin: {
+			type: String,
+			default: null,
+		},
+		bio: {
+			type: String,
+			default: null,
+		},
+		posts: [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				ref: 'Post',
+			},
+		],
+		todos: [todoSchema],
+		jobs: [jobSchema],
+		friends: [
+			{
+				type: mongoose.Schema.Types.ObjectId,
+				ref: 'Profile',
+			},
+		],
+	},
+	{
+		timestamps: true,
+	}
+);
 
 const Profile = mongoose.model('Profile', profileSchema)
 

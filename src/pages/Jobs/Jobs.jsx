@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router'
 
 // Components
-
+import JobCard from './JobCrad'
 //Services
 import * as jobService  from '../../services/jobService'
 
@@ -20,6 +20,14 @@ import * as jobService  from '../../services/jobService'
     }
   }
 
+  // const jobList= jobs.map((ele, idx)=>{
+  //   return(
+  //     // <JobCard 
+  //     <h1>Jobs here</h1>
+  //     // />
+  //   )
+  // })
+
   return (
     <div className="layout">
     <select name="jobs" onChange={searchJob}>
@@ -27,7 +35,8 @@ import * as jobService  from '../../services/jobService'
       <option value="IT">IT</option>
       <option value="Software Engineer">Software Engineer</option>
     </select>
-
+   
+    
     </div>
   )
 }
