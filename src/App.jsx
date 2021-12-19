@@ -7,6 +7,7 @@ import Landing from './pages/Landing/Landing'
 import Profiles from './pages/Profiles/Profiles'
 import PostList from './pages/PostList'
 import * as authService from './services/authService'
+import Jobs from './pages/Jobs/Jobs'
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser())
@@ -42,6 +43,10 @@ const App = () => {
         <Route
           path="/posts"
           element={user ? <PostList user={user}/> : <Navigate to="/login" />}
+        />
+        <Route
+          path="/jobs"
+          element={user ? <Jobs user={user}/> : <Navigate to="/login" />}
         />
       </Routes>
     </>
