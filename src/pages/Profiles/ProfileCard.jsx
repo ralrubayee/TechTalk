@@ -2,6 +2,7 @@ import React from 'react'
 import ProfileAction from './ProfileAction'
 
 const ProfileCard = (props) => {
+  
 
 const isFriend = props.myFriends.includes(props.profileId)
 const isMe = props.user.includes(props.profileId)
