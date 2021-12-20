@@ -24,7 +24,10 @@ console.log('my profile', myProfile)
   return(
       <>
 
-        <ProfileHeader user={props.user} />
+        <ProfileHeader 
+        user={props.user}
+        profile = {myProfile}
+        />
 
       </>
   )
