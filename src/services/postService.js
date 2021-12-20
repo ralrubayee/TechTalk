@@ -39,6 +39,16 @@ export const getPostById = async (postId) => {
 	}
 };
 
+export const deletePost = async (postId) => {
+  try {
+    await fetch(`${BASE_URL}${postId}`, {
+      method: 'DELETE',
+      headers: { 'Authorization': 'Bearer ' + tokenService.getToken() }
+    })
+  } catch (error) {
+    throw error
+  }
+}
 
 export const createComment = async (postId, comment) => {
 	try {
