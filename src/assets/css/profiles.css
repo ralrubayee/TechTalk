@@ -20,14 +20,29 @@
   background-color: rgb(98, 98, 233);
 }
 
-.card-content {
+.card-img {
   padding: 5px;
-  width: 60px;
-
+  width: 50px;
 }
 
 .card-title {
   display: flex;
   justify-content: center;
   align-items:center;
+  width: 100px;
+}
+
+.profile-button{
+  float: left;
+  margin-left: 0;
+  background-color: transparent;
+  border: transparent;
+  width: 50px;
+  margin: 0;
+  padding:0;
+  color: white;
+}
+
+.card-title > *{
+  float:left;
 }
