@@ -10,6 +10,7 @@ const ProfileInfoForm=() =>{
     linkedin:"",
     github:"",
   })
+  console.log('formData', formData)
   const handleChange = evt =>{
     setFormData({...formData, [evt.target.name]: [evt.target.value]})
   }
@@ -21,19 +22,47 @@ const handleSumbit = async (e) =>{
   e.preventDefault()
   try {
     const editProfile = await profileService.updateProfile(formData)
-    
+    //navgate??
   } catch (error) {
     throw error
   }
 }
 
-  // console.log(props)
 
   return(
     
-      <div>
-      </div>
-
+    <form className='create-form' onSubit={handleSumbit}> 
+      <input
+        type="text"
+        required
+        name="linkedin"
+        autoComplete='off'
+        placeholder='linkedin'
+        value=""
+        onChange={handleChange}
+      />
+        
+      <input
+        type="text"
+        required
+        name="github"
+        autoComplete='off'
+        placeholder='github'
+        value=""
+        onChange={handleChange}
+      />
+      
+      <input
+        type="text"
+        required
+        name="brio"
+        autoComplete='off'
+        placeholder='bio'
+        value=""
+        onChange={handleChange}
+      />
+      <button type="submit">Save Changes</button>
+    </form>
   )
 }
 
