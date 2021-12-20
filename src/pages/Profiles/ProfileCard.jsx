@@ -10,9 +10,9 @@ const isMe = props.user.includes(props.profileId)
   return(
     <div className="card-container">
       <div className="card">
-        <img className="card-content" src={props.img} alt={props.name}  />
+        <img className="card-img" src={props.img} alt={props.name}  />
         <p className="card-title">{props.name}</p>
-        {isFriend ? "" : isMe ? "" :
+        {isFriend ? <button className='profile-button'><i class="far fa-check-square"></i></button> : isMe ? "" :
         <ProfileAction onClick={props.onClick}/>  }
       </div>
     </div>
