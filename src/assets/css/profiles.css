@@ -1,15 +1,13 @@
 .profile-card{
+  width: 200px; 
+  display:inline-table;
   padding:10px;
-  display: flex;
-  flex-direction: row;
+  align-content: center;
   justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
 }
 
 .card-container {
-  height: 65px;
-  width: 200px; 
   display: flex;
   flex-direction: row;
 }
