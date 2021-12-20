@@ -10,7 +10,7 @@ function signup(req, res) {
       } else if (!process.env.SECRET) {
         throw new Error('no SECRET in .env file')
       } else {
-        Profile.create(req.body)
+        Profile.create(req.body)›
           .then(newProfile => {
             req.body.profile = newProfile._id
             User.create(req.body)
