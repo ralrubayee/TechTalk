@@ -18,7 +18,7 @@ const ProfileInfo = (props) => {
       setMyProfile(profile) 
     }
     getProfile()
-  },[])
+  },[props.user.profile])
   // console.log('myProfile', profileService.profileInfo(props.user.profile))
 console.log('my profile', myProfile)  
   return(
@@ -28,7 +28,6 @@ console.log('my profile', myProfile)
         user={props.user}
         profile = {myProfile}
         />
-
       </>
   )
 }

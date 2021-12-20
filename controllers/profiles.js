@@ -19,6 +19,20 @@ const show = async (req, res) => {
   }
 }
 
+const updateProfile =  async (req,res) =>{
+  try{
+    const profile = await Profile.findByIdAndUpdate(
+      req.user.profile, 
+      req.body,
+      { new:true }
+    ).populate("bio","linkedin", "github" )
+    return res.status(200).json(profile)
+  } catch (err) {
+    return res.status(500).json(err)
+  }
+}
+
+
 const createTodo = async (req, res) => {
   try {
     req.body.created_by = req.user.profile
@@ -68,7 +82,6 @@ const addFriend = async (req, res) => {
     const myProfile = await Profile.findById(req.user.profile)
     const profile = await Profile.findById(req.params.id)
     myProfile.friends.push(profile)
-
     await myProfile.save()
     return res.status(200).json(myProfile)
 
@@ -85,5 +98,6 @@ export {
   show,
   update,
   deleteTodo as delete,
-  addFriend
+  addFriend,
+  updateProfile
 }

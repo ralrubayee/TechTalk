@@ -41,7 +41,6 @@ const index = async (req, res) => {
 }
 const update = async (req, res) => {
   try {
-    // const updateData = { text: `${req.body.text}` }
     const updatedPost = await Post.findByIdAndUpdate(
       req.params.id,
       req.body,
