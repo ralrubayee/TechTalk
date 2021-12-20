@@ -12,6 +12,8 @@ const PostList = (props) => {
   // console.log("postlist444",props.user);
 
   const [posts, setPosts] = useState([])
+  const [comments, setComments] = useState([])
+
   useEffect(() => {
     const fetchAllPosts = async () => {
       const postData = await getAllPosts()
@@ -37,8 +39,8 @@ const PostList = (props) => {
           post={post}
           setPost={setPosts}
           user={props.user}
-          // comments={comments}
-          // setComments={setComments}
+          comments={comments}
+          setComments={setComments}
           /> 
       </>
           ))}

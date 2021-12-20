@@ -56,3 +56,17 @@ export const createComment = async (postId, comment) => {
 		throw error;
 	}
 };
+
+
+export const deleteComment = async (postId, commentId) => {
+	try {
+		await fetch(`${BASE_URL}${postId}/comments/${commentId}`, {
+			method: 'DELETE',
+			headers: {
+				Authorization: 'Bearer ' + tokenService.getToken(),
+			},
+		});
+	} catch (error) {
+		throw error;
+	}
+};
