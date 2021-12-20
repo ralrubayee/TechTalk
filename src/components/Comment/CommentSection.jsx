@@ -9,21 +9,18 @@ import CreateComment from './CreateComment'
 import * as postService from '../../services/postService'
 
 const CommentSection = (props) => {
+  const [posts, setPosts]=useState()
   const comments = props.post.comments
   console.log("comments", comments);
+  console.log("props.post", props.post);
   const handleCreateComment = async (formData) => {
   try {
     const newComment = await postService.createComment(props.post._id, formData)
-    
+    // setPosts
   } catch (error) {
     throw error
   }
 }
-
-
-  
-  
-
   return (
     <div className="comment-section">
       <div className="header">

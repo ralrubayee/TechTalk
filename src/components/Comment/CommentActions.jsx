@@ -4,7 +4,7 @@ import React from 'react'
 const CommentActions = (props) => {
   return (
     <div className="interactions">
-      <button >Delete</button>
+      <button onClick={()=>{}} >Delete</button>
     </div>
   )
 }

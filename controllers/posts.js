@@ -21,7 +21,9 @@ const index = async (req, res) => {
   try {
     const posts = await Post.find({})
       .populate('added_by')
+      .populate('comments.commenter')
       .sort({ createdAt: 'desc' })
+      console.log("POST", posts)
 
     return res.status(200).json(posts)
   } catch (err) {
@@ -34,6 +36,7 @@ const index = async (req, res) => {
     const post = await Post.findById(req.params.id)
       .populate('added_by')
       .populate('comments.commenter')
+      console.log("POST", post)
     return res.status(200).json(post)
   } catch (err) {
     return res.status(500).json(err)
