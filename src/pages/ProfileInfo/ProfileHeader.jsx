@@ -7,7 +7,8 @@ console.log('ProfileHeader', props)
 
   return(
   <>
-  <p>{props.user.name}</p>
+  {/* <p>{props.user.name}</p> */}
+  <h2>{props.profile.name}</h2>
   
   </>
   )
