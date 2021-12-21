@@ -9,3 +9,98 @@ body {
 img {
   height: 50px;
 }
+
+
+/* Navbar Css */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgb(110, 192, 255);
+  margin: 10px;
+  border: white solid 1px;
+  border-radius: 15px;
+}
+
+.nav-links a {
+  font-size: 20px;
+  color: rgb(255, 240, 255);
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.logo {
+  font-size: 32px;
+}
+
+.logo * {
+  color: white
+}
+
+.menu {
+  display: flex;
+  gap: 1em;
+  font-size: 18px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.menu li:hover {
+  background-color: #6c2672;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.menu li {
+  padding: 5px 14px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+#logo-img {
+  width: 45px;
+}
+
+#checkbox_toggle {
+  display: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+  .menu { 
+    display:none;
+    position: absolute;
+    background-color:#420048;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color:#6c2672;
+    transition: 0.3s ease;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type=checkbox]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
