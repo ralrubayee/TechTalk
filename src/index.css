@@ -5,3 +5,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display:-webkit-inline-flex;
 }
+
+img {
+  height: 50px;
+}
