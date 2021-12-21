@@ -12,11 +12,27 @@ function index(req, res) {
 const show = async (req, res) => {
   try {
     const profile = await Profile.findById(req.params.id)
+    .populate("_id")
     return res.status(200).json(profile)
   } catch (err) {
     return res.status(500).json(err)
   }
 }
+
+const updateProfile =  async (req,res) =>{
+  console.log("hey you !!!!", req.body)
+  try{
+    const profile = await Profile.findByIdAndUpdate(
+      req.user.profile, 
+      req.body,
+      { new:true }
+)
+    return res.status(200).json(profile)
+  } catch (err) {
+    return res.status(500).json(err)
+  }
+}
+
 
 const createTodo = async (req, res) => {
   try {
@@ -67,7 +83,6 @@ const addFriend = async (req, res) => {
     const myProfile = await Profile.findById(req.user.profile)
     const profile = await Profile.findById(req.params.id)
     myProfile.friends.push(profile)
-
     await myProfile.save()
     return res.status(200).json(myProfile)
 
@@ -84,5 +99,6 @@ export {
   show,
   update,
   deleteTodo as delete,
-  addFriend
+  addFriend,
+  updateProfile
 }

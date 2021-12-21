@@ -39,6 +39,16 @@ export const getPostById = async (postId) => {
 	}
 };
 
+export const deletePost = async (postId) => {
+  try {
+    await fetch(`${BASE_URL}${postId}`, {
+      method: 'DELETE',
+      headers: { 'Authorization': 'Bearer ' + tokenService.getToken() }
+    })
+  } catch (error) {
+    throw error
+  }
+}
 
 export const createComment = async (postId, comment) => {
 	try {
@@ -52,6 +62,20 @@ export const createComment = async (postId, comment) => {
 		});
 		const data = await res.json();
 		return data;
+	} catch (error) {
+		throw error;
+	}
+};
+
+
+export const deleteComment = async (postId, commentId) => {
+	try {
+		await fetch(`${BASE_URL}${postId}/comments/${commentId}`, {
+			method: 'DELETE',
+			headers: {
+				Authorization: 'Bearer ' + tokenService.getToken(),
+			},
+		});
 	} catch (error) {
 		throw error;
 	}
