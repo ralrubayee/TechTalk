@@ -13,12 +13,9 @@ console.log('this is todo props',props)
         <button className="button-complete task-button">
         <i className="fa fa-check-circle"></i>
         </button>
-        <button className="button-edit task-button">
-        <i className="fa fa-edit"></i>
-        </button>
         <button 
         className="button-delete task-button"
-        onClick={()=> props.handleDeleteTodo(props.todo._id) }
+        onClick={()=> props.handleDeleteTodo(props.todos._id) }
         >
         <i className="fa fa-trash"></i>
         </button>
