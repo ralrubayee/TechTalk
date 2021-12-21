@@ -12,7 +12,7 @@ function index(req, res) {
 const show = async (req, res) => {
   try {
     const profile = await Profile.findById(req.params.id)
-    .populate("_id")
+    .populate("friends")
     return res.status(200).json(profile)
   } catch (err) {
     return res.status(500).json(err)

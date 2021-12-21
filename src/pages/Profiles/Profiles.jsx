@@ -5,38 +5,35 @@ import '../../assets/css/profiles.css'
 
 const Profiles = (props) => {
   const [profiles, setProfiles] = useState([])
-  
-  useEffect(()=> {
+  const myProfile=profiles.find((profile)=> profile._id === props.user.profile)
+  const handleAddFriend= async(ele)=>{
+      await profileService.addFriend(ele._id)
+      setProfiles([...profiles, ele])
+  }
+  useEffect(()=>{
     profileService.getAllProfiles()
     .then(profiles => setProfiles(profiles))
-  }, [])
-
-  const myProfile = profiles.filter(profile => {
-    return (profile._id === props.user.profile)
-  })
-
+  },[])
   const profileList = profiles.map((ele, idx)=> {
     return (
-      <div className="profile-card">
-
-        <ProfileCard
+      <ProfileCard
           user={props.user.profile}
           profileId={ele._id}
           img={ele.avatar}
           name={ele.name}
           key={idx}
-          onClick={()=> profileService.addFriend(ele._id)}
-          myFriends={myProfile[0].friends}
+          setProfiles={setProfiles}
+          myFriends={myProfile.friends}
+          handleAddFriend={handleAddFriend}
+          profile={ele}
           />
-      </div>
     )
   })
-
   return (
-    <>
+    <div className="profile-card">
+    
     {profileList}
-    </>
+    </div>
   )
 }
-
 export default Profiles

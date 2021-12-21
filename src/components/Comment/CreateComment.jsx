@@ -2,27 +2,21 @@ import React, { useState } from "react"
 
 
 const CreateComment = (props) => {
-  console.log("createComment", props);
 	const [text, setText] = useState('')
-  
 	const formData = {
     comment_text: text,
     commenter: props.user.profile
   }
   const handleSubmit = (e) => {
-    console.log("event",e.target.value);
-  e.preventDefault()
-  props.handleCreateComment(formData)
-	setText('')
+    e.preventDefault()
+    props.handleCreateComment(formData)
+    setText('')
   }
-
-
   return (
     <form className="create-form" onSubmit={handleSubmit}>
       <div className="question-prompt">
         <label>Enter your Comment</label>
       </div>
-
       <input
         required
         autoComplete='off'

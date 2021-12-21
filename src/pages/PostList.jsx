@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router'
+
 // Services
-import { getAllPosts,getPostById, createComment,  deletePost} from '../services/postService'
+import { getAllPosts, deletePost} from '../services/postService'
 
 // Components
 import PostCard from '../components/Post/PostCard'
@@ -9,15 +9,12 @@ import CreatePost from './CreatePost/CreatePost'
 import CommentSection from '../components/Comment/CommentSection'
 
 const PostList = (props) => {
-  // console.log("postlist444",props.user);
-
   const [posts, setPosts] = useState([])
   const [comments, setComments] = useState([])
 
   const handleDeletePost = async (postId) => {
   try {
     await deletePost(postId)
-    // navigate('/posts')
   } catch (error) {
     throw error
   }
@@ -26,7 +23,6 @@ const PostList = (props) => {
     const fetchAllPosts = async () => {
       const postData = await getAllPosts()
       setPosts(postData)
-      console.log("PostData", postData);
     }
     fetchAllPosts()
     return () => { setPosts([]) } 
