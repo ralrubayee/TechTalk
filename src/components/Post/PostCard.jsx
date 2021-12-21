@@ -1,7 +1,11 @@
 import React from 'react'
 import PostActions from './PostActions';
+import EditPost from './EditPost';
+
+
+
 const PostCard = (props) => {
-  console.log("prpod", props);
+  console.log("edit", props);
   return (
     <div className="post-card">
       <div className="card-header">
@@ -13,6 +17,7 @@ const PostCard = (props) => {
         <p>{props.post.text}</p>
       </div>
       <div className="comment-dropdown"></div>
+      <EditPost post={props.post} />
     </div>
   )
 }
