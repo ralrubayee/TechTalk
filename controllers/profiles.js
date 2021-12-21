@@ -20,12 +20,13 @@ const show = async (req, res) => {
 }
 
 const updateProfile =  async (req,res) =>{
+  console.log("hey you !!!!", req.body)
   try{
     const profile = await Profile.findByIdAndUpdate(
       req.user.profile, 
       req.body,
       { new:true }
-    ).populate("bio","linkedin", "github" )
+)
     return res.status(200).json(profile)
   } catch (err) {
     return res.status(500).json(err)

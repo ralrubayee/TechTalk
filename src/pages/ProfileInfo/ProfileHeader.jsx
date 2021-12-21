@@ -1,4 +1,5 @@
 import React from 'react'
+ 
 
 
 
@@ -14,6 +15,7 @@ console.log('ProfileHeader', props)
   <h1>Name: {props.profile.name}</h1>
   <img src={props.profile.avatar} alt={props.profile.name} />
   </>
+  
   )
 }
 

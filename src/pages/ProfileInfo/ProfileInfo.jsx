@@ -4,7 +4,8 @@ import * as profileService from '../../services/profileService'
 import {useState, useEffect} from  "react"
 
 import ProfileHeader from './ProfileHeader'
- 
+import ProfileInfoForm from "./ProfileInfoForm"
+import { set } from "mongoose"
 
 
 const ProfileInfo = (props) => {
@@ -28,6 +29,7 @@ console.log('my profile', myProfile)
         user={props.user}
         profile = {myProfile}
         />
+        <ProfileInfoForm profile={myProfile} setMyProfile= {setMyProfile} />
       </>
   )
 }
