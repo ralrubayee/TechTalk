@@ -21,8 +21,8 @@ const ToDoSection = (props)=> {
 
   const handleDeleteTodo = async (todoId) => {
     try {
-    //   await profileService.deleteTodo(props.user.profile, todoId)
-    //  setTodos(todos.filter(todo => todo._id !== todoId))
+      await profileService.deleteTodo(todoId)
+     setTodos(todos.filter(todo => todo._id !== todoId))
     } catch (error) {
       throw error
     }

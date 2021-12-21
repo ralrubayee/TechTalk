@@ -12,7 +12,7 @@ const TodoList = (props) => {
         todos={props.todos}
         handleDeleteTodo={props.handleDeleteTodo}
         />
-      ))}
+      )).reverse()}
     </div>
   )
 }
