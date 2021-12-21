@@ -16,12 +16,12 @@ const CommentCard = (props) => {
         <UserCard
           profile={props.comment.commenter}
         /> 
-        <CommentActions {...props} />
       </div>
       <div className="question-container">
         <p>
           {props.comment.comment_text}
         </p>
+        <CommentActions {...props} />
       </div>
     </div>
   )

@@ -39,6 +39,24 @@ export const getPostById = async (postId) => {
 	}
 };
 
+export const updatePost = async (postId, text) => {
+
+	try {
+		const res = await fetch(`${BASE_URL}${postId}`, {
+			method: 'PUT',
+			headers: {
+				'content-type': 'application/json',
+				Authorization: 'Bearer ' + tokenService.getToken(),
+			},
+			body: JSON.stringify(text),
+		});
+		const data = await res.json();
+		return data;
+	} catch (error) {
+		throw error;
+	}
+};
+
 export const deletePost = async (postId) => {
   try {
     await fetch(`${BASE_URL}${postId}`, {

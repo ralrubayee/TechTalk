@@ -14,9 +14,7 @@ const PostForm = (props) => {
         value={props.text}
         onChange={(e) => props.setText(e.target.value)}
       />
-
       <div className="border"></div>
-
       <div className="border"></div>
       <button type="submit">Submit</button>
     </form>

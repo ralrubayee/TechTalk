@@ -33,7 +33,6 @@ const CreatePost = (props) => {
       <PostForm 
         text={text}
         setText={setText}
-
         handleCreatePost={handleCreatePost}
       />
     </div>
