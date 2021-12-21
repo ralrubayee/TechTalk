@@ -1,4 +1,4 @@
-import React, { useState, useEffect} from "react"
+import React from "react"
 
 
 // Components
@@ -10,11 +10,10 @@ import * as postService from '../../services/postService'
 
 const CommentSection = (props) => {
   const comments = props.post.comments
-  console.log("comments", comments);
-  console.log("props.post", props.post);
   const handleCreateComment = async (formData) => {
   try {
     const newComment = await postService.createComment(props.post._id, formData)
+    props.setComments([...comments, newComment])
   } catch (error) {
     throw error
   }
@@ -23,12 +22,11 @@ const CommentSection = (props) => {
 const handleDeleteComment = async (commentId) => {
   try {
     await postService.deleteComment(props.post._id, commentId)
-    props.setComments(props.comments.filter(comment => comment._id !== commentId))
+    // props.setComments(comments.filter(comment => comment._id !== commentId))
   } catch (error) {
     throw error
   }
 }
-
 
   return (
     <div className="comment-section">

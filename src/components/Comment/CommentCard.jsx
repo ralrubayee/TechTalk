@@ -7,8 +7,7 @@ import UserCard from "../../misc/UserCard";
 import CommentActions from './CommentActions'
 
 const CommentCard = (props) => {
-  // console.log("comment",props.comment.commenter);
-  console.log("commentCard",props);
+
   return (
     <div className="comment-card">
 
