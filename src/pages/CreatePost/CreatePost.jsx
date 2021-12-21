@@ -19,6 +19,7 @@ const CreatePost = (props) => {
     try {
       const newPost = await createPost(formData)
       props.setPosts([newPost,...props.posts])
+      setText('')
     } catch (error) {
       throw error
     }
