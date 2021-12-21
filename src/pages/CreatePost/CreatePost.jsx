@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router'
+
 
 // Components
 import PostForm from './PostForm'
@@ -8,21 +8,17 @@ import PostForm from './PostForm'
 import { createPost } from '../../services/postService'
 
 const CreatePost = (props) => {
-  console.log("hello",props)
-  const navigate = useNavigate()
   const [text, setText] = useState('')
 
   const formData = {
     text: text, 
     added_by: props.user.profile, 
   }
-
   const handleCreatePost = async (e) => {
     e.preventDefault()
     try {
       const newPost = await createPost(formData)
-      console.log(newPost) 
-      navigate('/posts')
+      props.setPosts([newPost,...props.posts])
     } catch (error) {
       throw error
     }

@@ -2,15 +2,15 @@ import React, { useState } from 'react'
 
 
 // Components
-
+import PostForm from '../../pages/CreatePost/PostForm'
 
 //Services
 import { updatePost } from '../../services/postService'
 
 const EditPost = (props) => {
-  const authorId = props.post.added_by?._id ? props.post.added_by._id : props.post.added_by
-  const isAuthor = props.user?.profile === authorId
-  console.log("hello",props)
+  // const authorId = props.post.added_by._id ? props.post.added_by._id : props.post.added_by
+  // const isAuthor = props.user?.profile === authorId
+  console.log("hello",props.post.added_by)
   const [text, setText] = useState({
     text:''
   })
@@ -31,9 +31,8 @@ const EditPost = (props) => {
       throw error
     }
   }
-
+  console.log('PROPS',props.post);
   return (
-    isAuthor &&
     <form className='create-form' onSubmit={handleSubmit}>
       <input
         type="text"
@@ -45,6 +44,7 @@ const EditPost = (props) => {
       />
       <button type="submit">Save Changes</button>
     </form>
+
   )
 }
 
