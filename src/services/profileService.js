@@ -67,6 +67,19 @@ export const createTodo = async (todo) => {
 	}
 };
 
+export const deleteTodo = async (todoId) => {
+  try {
+    await fetch(`${BASE_URL}/todos/${todoId}` , {
+      method:'DELETE',
+    	headers: {
+				'content-type': 'application/json',
+				Authorization: `Bearer ${tokenService.getToken()}`,
+			},
+    })
+  } catch (error) {
+		throw error;
+	}
+}
 
 export { 
   getAllProfiles,
