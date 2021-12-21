@@ -8,7 +8,6 @@ const Profiles = (props) => {
   const myProfile=profiles.find((profile)=> profile._id === props.user.profile)
   const handleAddFriend= async(ele)=>{
       await profileService.addFriend(ele._id)
-      setProfiles([...profiles, ele])
   }
   useEffect(()=>{
     profileService.getAllProfiles()
@@ -16,6 +15,7 @@ const Profiles = (props) => {
   },[])
   const profileList = profiles.map((ele, idx)=> {
     return (
+      <>
       <ProfileCard
           user={props.user.profile}
           profileId={ele._id}
@@ -27,6 +27,7 @@ const Profiles = (props) => {
           handleAddFriend={handleAddFriend}
           profile={ele}
           />
+        </>
     )
   })
   return (

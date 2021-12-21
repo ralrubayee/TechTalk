@@ -1,8 +1,8 @@
 .profile-card{
-  width: 200px; 
-  display:inline-table;
-  padding:10px;
-  align-content: center;
+  margin-left: 8px;
+  display: flex;
+  flex-wrap:wrap ;
+  /* padding: 5px; */
   justify-content: center;
   align-items: center;
 }
@@ -10,6 +10,9 @@
 .card-container {
   display: flex;
   flex-direction: row;
+  height: 70px;
+  border-radius: 20%;
+  margin: 1px;
 }
 
 .card {
@@ -21,27 +24,36 @@
 }
 
 .card-img {
-  padding: 5px;
-  width: 50px;
+  margin-left: 2px;
+  margin-top: 4px;
+  padding: 2px;
+  object-fit: cover;
+  border: 1px solid white;
+  border-radius: 90%;
+  background-color: rgb(215, 179, 215);
 }
 
 .card-title {
   display: flex;
-  justify-content: center;
+  margin: 5px;
+  padding-left: 5px;
+  /* justify-content: center; */
+  /* text-align: center; */
   align-items:center;
   width: 100px;
+  font-size: 20px;
+  overflow: hidden;
 }
 
 .profile-button{
   float: left;
-  margin-left: 0;
+  /* margin-left: 0; */
   background-color: transparent;
   border: transparent;
   width: 50px;
-  margin: 0;
-  padding:0;
   color: white;
 }
+
 
 .card-title > *{
   float:left;

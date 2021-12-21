@@ -5,7 +5,7 @@ const NavBar = ({ user, handleLogout }) => {
   console.log(user)
   return (
     <>
-    <header>
+    <header id="page-header">
       <nav className="navbar">
         <div class="logo">
             TechTalk<img 
@@ -36,7 +36,7 @@ const NavBar = ({ user, handleLogout }) => {
           </div>      
         </ul>
       </nav>
-</header>
+      </header>
     </>
   )
 }
