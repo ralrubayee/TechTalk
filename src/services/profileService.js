@@ -35,6 +35,22 @@ async function profileInfo(Id) {
     throw error
   }
 }
+export const updateProfile = async (id, formData)=>{
+  try{
+    const res = await fetch(`${BASE_URL}/${id}`,{
+      method:'PUT',
+      headers: { 
+        'content-type': 'application/json',
+        'Authorization': 'Bearer ' + tokenService.getToken()},
+      body: JSON.stringify(formData)
+    })
+    const data = await res.json()
+    return data
+  } catch (error) {
+    throw error
+  }
+}
+
 
 
 export { 
