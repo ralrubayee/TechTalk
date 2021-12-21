@@ -40,13 +40,13 @@ form input {
 	border-radius:20px;
 	display:inline-block;
 	-webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-        box-sizing:border-box;
-  -webkit-transition:0.2s ease all;
-    -moz-transition:0.2s ease all;
-    -ms-transition:0.2s ease all;
-      -o-transition:0.2s ease all;
-        transition:0.2s ease all;
+	   -moz-box-sizing:border-box;
+	        box-sizing:border-box;
+    -webkit-transition:0.2s ease all;
+	   -moz-transition:0.2s ease all;
+	    -ms-transition:0.2s ease all;
+	     -o-transition:0.2s ease all;
+	        transition:0.2s ease all;
 }
 
 form input[type=text]:focus,
@@ -103,10 +103,10 @@ input[type="submit"]:active {
 	text-align:center;
 	color:lightgray;
 	-webkit-transition:0.2s ease all;
-	-moz-transition:0.2s ease all;
-  -ms-transition:0.2s ease all;
-  -o-transition:0.2s ease all;
-  transition:0.2s ease all;
+	   -moz-transition:0.2s ease all;
+	    -ms-transition:0.2s ease all;
+	     -o-transition:0.2s ease all;
+	        transition:0.2s ease all;
 }
 
 #logo:hover {
