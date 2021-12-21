@@ -5,7 +5,7 @@ import EditPost from './EditPost';
 
 
 const PostCard = (props) => {
-  console.log("edit", props);
+  console.log("edit", props.user);
   return (
     <div className="post-card">
       <div className="card-header">
@@ -17,7 +17,12 @@ const PostCard = (props) => {
         <p>{props.post.text}</p>
       </div>
       <div className="comment-dropdown"></div>
-      <EditPost post={props.post} />
+     {props.user._id = props.post.added_by._id ?
+      <EditPost post={props.post} 
+      user={props.user}
+      />
+      :''
+     }
     </div>
   )
 }

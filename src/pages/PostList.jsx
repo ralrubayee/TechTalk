@@ -36,7 +36,10 @@ const PostList = (props) => {
   return (
     <div>
       <h1>Posts!</h1>
-      <CreatePost user={props.user}/>
+      <CreatePost user={props.user}
+      posts={posts}
+      setPosts={setPosts}
+      />
       {posts?.map((post) => (
       <>
         <PostCard
