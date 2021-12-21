@@ -33,7 +33,6 @@ const updateProfile =  async (req,res) =>{
   }
 }
 
-
 const createTodo = async (req, res) => {
   try {
     req.body.created_by = req.user.profile
