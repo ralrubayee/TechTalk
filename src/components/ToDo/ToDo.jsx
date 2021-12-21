@@ -1,27 +1,29 @@
-import React, {useState} from "react";
-import Header from "./header";
-import Form from "./Form";
-import TodoList from "./TodoList";
+import React, {useState , useEffect} from "react";
 
-const ToDo = () => {
-
-const [input, setInput]= useState("");
-const [todos, setTodos]= useState([]);
-
+const ToDo = (props) => {
+console.log('this is todo props',props)
   return (
-    <>
-    <Header />
-    <Form 
-      input={input}
-      setInput={setInput}
-      todos={todos}
-      setTodos={setTodos}
-    />
-    <TodoList 
-      todos={todos}
-      setTodos={setTodos}
-    />
-    </>
+    <li 
+    className="list-item" 
+    >
+      <p>
+     { props.todo.todo_text}
+      </p>
+      <div>
+        <button className="button-complete task-button">
+        <i className="fa fa-check-circle"></i>
+        </button>
+        <button className="button-edit task-button">
+        <i className="fa fa-edit"></i>
+        </button>
+        <button 
+        className="button-delete task-button"
+        onClick={()=> props.handleDeleteTodo(props.todo._id) }
+        >
+        <i className="fa fa-trash"></i>
+        </button>
+      </div>
+    </li>
   )
 }
 

@@ -50,7 +50,22 @@ export const updateProfile = async (id, formData)=>{
     throw error
   }
 }
-
+export const createTodo = async (todo) => {
+	try {
+		const res = await fetch(`${BASE_URL}/todos`, {
+			method: 'POST',
+			headers: {
+				'content-type': 'application/json',
+				Authorization: `Bearer ${tokenService.getToken()}`,
+			},
+			body: JSON.stringify(todo),
+		});
+		const data = await res.json();
+		return data;
+	} catch (error) {
+		throw error;
+	}
+};
 
 
 export { 
