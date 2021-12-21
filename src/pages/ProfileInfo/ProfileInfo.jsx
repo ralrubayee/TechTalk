@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom"
 import React from 'react'
 import * as profileService from '../../services/profileService'
 import {useState, useEffect} from  "react"
+import ToDo from "../../components/ToDo/ToDo"
 
 import ProfileHeader from './ProfileHeader'
 import ProfileInfoForm from "./ProfileInfoForm"
@@ -30,7 +31,9 @@ console.log('my profile', myProfile)
         profile = {myProfile}
         />
         <ProfileInfoForm profile={myProfile} setMyProfile= {setMyProfile} />
+        <ToDo />
       </>
+      
   )
 }
 
