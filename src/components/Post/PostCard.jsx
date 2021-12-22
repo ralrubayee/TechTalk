@@ -5,7 +5,7 @@ import EditPost from './EditPost';
 
 
 const PostCard = (props) => {
-  console.log(props.post)
+  console.log('something',props.post.added_by._id)
   return (
     <div className="post-card">
       <div className="card-header">
@@ -18,7 +18,7 @@ const PostCard = (props) => {
       </div>
       <div className="comment-dropdown"></div>
      
-     {props.user._id = props.post.added_by._id ?
+     {props.user.profile === props.post.added_by._id ?
       <EditPost post={props.post} 
       user={props.user}
       handleUpdatePost={props.handleUpdatePost}
