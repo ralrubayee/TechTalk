@@ -85,12 +85,14 @@ const createComment = async (req, res) => {
 
 const deleteComment = async (req, res) => {
   try {
-    const post = await Post.findById(req.params.postId)
+    const post = await Post.findById(req.params.postId).populate("comments.commenter")
     post.comments.remove({ _id: req.params.commentId })
 
     await post.save()
-    return res.status(204).end()
+    console.log(post)
+    return res.status(200).json(post)
   } catch (err) {
+    console.log(err)
     res.status(500).json(err)
   }
 }
