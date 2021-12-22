@@ -20,9 +20,9 @@
 
 .bio__info-flex {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem 1.2rem;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
 }
 
 .bio__info .avatar__block {
@@ -56,4 +56,7 @@
 }
 .bio__content h5, .bio__content p {
   text-align: center;
+}
+.url{
+  padding: 0px;
 }
