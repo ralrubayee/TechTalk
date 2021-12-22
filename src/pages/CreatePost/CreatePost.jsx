@@ -24,6 +24,7 @@ const CreatePost = (props) => {
       throw error
     }
   }
+  console.log(props.user.profile)
 
   return (
     <div className="layout">
