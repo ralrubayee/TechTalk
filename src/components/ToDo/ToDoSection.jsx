@@ -2,6 +2,7 @@ import React, { useState, useEffect} from "react"
 
 import CreateTodo from "./CreateTodo"
 import TodoList from "./TodoList"
+import '../../assets/css/todo.css'
 
 import * as profileService from '../../services/profileService'
 
@@ -34,7 +35,8 @@ const ToDoSection = (props)=> {
 
 
   return (
-    <div className="todo-section">
+    <section className="todo-section">
+      <div className="container">
       <div className="header">
         <h3>Todo Section</h3>
         <div className="header-buttons"></div>
@@ -47,7 +49,9 @@ const ToDoSection = (props)=> {
       handleDeleteTodo={handleDeleteTodo} />
       
       }
-    </div>
+      </div>
+      
+    </section>
   )
 
 }
