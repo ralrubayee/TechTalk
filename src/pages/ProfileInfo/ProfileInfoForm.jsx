@@ -21,9 +21,9 @@ const handleSubmit = async (e) =>{
     //navgate??
     props.setMyProfile(editProfile)
     setFormData({
-      bio:"",
-      linkedin:"",
-      github:"",
+      bio:'',
+      linkedin:'',
+      github:'',
     })
   } catch (error) {
     throw error

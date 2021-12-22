@@ -1,3 +1,6 @@
+body{
+  background-color: lightblue;
+}
 .bio__container {
   width: 90%;
   margin: 2rem auto;
@@ -7,11 +10,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 2px solid rgb(2, 0, 38);
+  box-shadow: 5px 5px 10px 2px rgba(0,0,0,.8);
 }
 
 .bio__flex .flex__item {
   width: 55%;
-  border: 1px dashed #ddd;
 }
 .bio__flex .flex__item:nth-of-type(2) {
   width: 45%;
@@ -61,33 +65,27 @@
   padding: 0px;
 }
 
-@media (max-width: 950px) {
-  .menu { 
-    margin-top: 42px;
-    margin-left: 69%;
-    display:none;
-    position: absolute;
-    background-color:rgba(10, 7, 59, 0.877);
-    right: 0;
-    left: 0;
-    text-align: center;
+@media only screen and (max-width: 600px) {
+  .create-form{
+    display: flex;
+    flex-direction: column;
+  }
+  .bio_info-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+  }
+  .bio__flex {
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid rgb(2, 0, 38);
+    box-shadow: 5px 5px 10px 2px rgb(0 0 0 / 80%);
+  }
+  .bio__flex .flex__item {
+    
+    width: 55%;
   }
 
-  .menu li:hover {
-    display: inline-block;
-    background-color:rgba(29, 27, 87, 0.746);
-    transition: 0.3s ease;
-  }
-
-  .menu li + li {
-    margin-top: 12px;
-  }
-
-  input[type=checkbox]:checked ~ .menu {
-    display: block;
-  }
-
-  .hamburger {
-    display: block;
-  }
 }
+
