@@ -32,7 +32,6 @@ const handleSubmit = async (e) =>{
   return(
     
     <form className='create-form' onSubmit={handleSubmit}> 
-    <h1>form</h1>
       <input
         type="text"
         name="linkedin"

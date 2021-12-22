@@ -19,10 +19,6 @@ console.log('this is props from profile info', props)
     }
     getProfile()
   },[props.user.profile])
-
-
-
-  // console.log('myProfile', profileService.profileInfo(props.user.profile))
 console.log('my profile', myProfile)  
   return(
       <>
