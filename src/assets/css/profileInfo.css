@@ -63,9 +63,10 @@
 
 @media (max-width: 950px) {
   .menu { 
+    margin-top: 42px;
     display:none;
     position: absolute;
-    background-color:#420048;
+    background-color:rgba(10, 7, 59, 0.877);
     right: 0;
     left: 0;
     text-align: center;
@@ -74,7 +75,7 @@
 
   .menu li:hover {
     display: inline-block;
-    background-color:#6c2672;
+    background-color:rgba(29, 27, 87, 0.746);
     transition: 0.3s ease;
   }
 

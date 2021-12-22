@@ -63,12 +63,13 @@ img {
   display: flex;
   gap: 1em;
   font-size: 18px;
+  
   border-radius: 10px;
   margin-top: 20px;
 }
 
 .menu li:hover {
-  background-color: #6c2672;
+  background-color: rgba(30, 28, 63, 0.87);
   border-radius: 5px;
   transition: 0.3s ease;
 }
@@ -106,7 +107,7 @@ img {
   .menu { 
     display:none;
     position: absolute;
-    background-color:#420048;
+    background-color: rgb(2, 0, 38);
     right: 0;
     left: 0;
     text-align: center;
@@ -115,7 +116,7 @@ img {
 
   .menu li:hover {
     display: inline-block;
-    background-color:#6c2672;
+    background-color: rgba(30, 28, 63, 0.87);
     transition: 0.3s ease;
   }
 
