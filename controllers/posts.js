@@ -4,7 +4,7 @@ import { Post } from "../models/post.js";
 const create = async (req, res) => {
   try {
     req.body.added_by = req.user.profile
-    const post = await new Post(req.body)
+    const post = await new Post(req.body).populate('added_by')
     await post.save()
     await Profile.updateOne(
       { _id: req.user.profile },
@@ -49,6 +49,7 @@ const update = async (req, res) => {
       req.body,
     { new: true }
     ).populate('added_by')
+    await updatedPost.save()
     return res.status(200).json(updatedPost)
   } catch (err) {
     return res.status(500).json(err)
