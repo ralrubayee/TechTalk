@@ -5,7 +5,8 @@ const TodoList = (props) => {
 
 
   return (
-    <div>
+    <div className="todos">
+      <div className="todos-container">
       {props.todos.map((todo)=>(
         <ToDo 
         todo={todo}
@@ -13,6 +14,7 @@ const TodoList = (props) => {
         handleDeleteTodo={props.handleDeleteTodo}
         />
       )).reverse()}
+      </div>
     </div>
   )
 }

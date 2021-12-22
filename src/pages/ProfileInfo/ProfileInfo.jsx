@@ -27,7 +27,7 @@ console.log('my profile', myProfile)
   return(
       <>
 
-        <ProfileHeader 
+        <ProfileHeader                      
         user={props.user}
         profile = {myProfile}
         />

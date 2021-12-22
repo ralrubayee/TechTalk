@@ -1,108 +1,59 @@
-@import url(https://fonts.googleapis.com/css?family=Lily+Script+One);
-
-body {
-	margin:0;
-	font-family:arial,tahoma,sans-serif;
-	font-size:12px;
-	font-weight:normal;
-	direction:ltr;
-  background:white;
+.bio__container {
+  width: 90%;
+  margin: 2rem auto;
 }
 
-form {
-	margin:10% auto 0 auto;
-	padding:30px;
-	width:400px;
-	height:auto;
-	overflow:hidden;
-	background:white;
-	border-radius:10px;
-}
-
-form label,
-form input {
-	float:left;
-	clear:both;
-}
-
-form input {
-	margin:15px 0;
-	padding:15px 10px;
-	width:100%;
-	outline:none;
-	border:1px solid #bbb;
-	border-radius:20px;
-	display:inline-block;
-	-webkit-box-sizing:border-box;
-	   -moz-box-sizing:border-box;
-	        box-sizing:border-box;
-    -webkit-transition:0.2s ease all;
-	   -moz-transition:0.2s ease all;
-	    -ms-transition:0.2s ease all;
-	     -o-transition:0.2s ease all;
-	        transition:0.2s ease all;
-}
-
-form input[type=text]:focus,
-form input[type="password"]:focus {
-	border-color:cornflowerblue;
-}
-
-
-input[type=submit]:hover {
-	opacity:0.8;
-}
-
-input[type="submit"]:active {
-	opacity:0.4;
-}
-
-
-.forgot:hover,
-.register:hover {
-	color:darkgray;
-}
-
-#logo {
-	margin:0 auto;
-	width:200px;
-	font-family:'Lily Script One', cursive;
-	font-size:60px;
-	font-weight:bold;
-	text-align:center;
-	color:lightgray;
-	-webkit-transition:0.2s ease all;
-	   -moz-transition:0.2s ease all;
-	    -ms-transition:0.2s ease all;
-	     -o-transition:0.2s ease all;
-	        transition:0.2s ease all;
-}
-
-#logo:hover {
-	color:cornflowerblue;
-}
-button {
-  background-color: #6eb6f1; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  border-radius: 10%;
-}
-.Bio{
-  max-width: 480px;
-  margin: 100px auto;
-  background: linear-gradient(90deg, #34a853 4%, #4285f4 0%) top/100% 34%
-      no-repeat,
-    linear-gradient(90deg, #fbbc04 50%, #4285f4 0%) top/100% 82% no-repeat,
-    linear-gradient(90deg, #fbbc04 10%, #ea4335 0%) top/100% 100%;
-  min-height: 300px;
+.bio__flex {
   display: flex;
-  border-radius: 4px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bio__flex .flex__item {
+  width: 55%;
+  border: 1px dashed #ddd;
+}
+.bio__flex .flex__item:nth-of-type(2) {
+  width: 45%;
+  margin-left: 1.5rem;
+}
+
+.bio__info-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 1.2rem;
+}
+
+.bio__info .avatar__block {
+  width: 25%;
+}
+.bio__info .text__block {
+  width: 70%;
+}
+.bio__info .avatar__container {
+  width: 70%;
+  margin: auto;
+}
+.bio__info .avatar-container img {
+  display: block;
+  margin: auto;
+}
+
+.bio__info .text__block li.url {
+  list-style-type: none;
+  line-height: 2;
+  font-size: 1.2rem;
+}
+.bio__info .text__block li.url span {
+  font-size: .8rem;
+  color: blue;
 }
 
 
-
+.bio__content {
+  padding: 1.3rem;
+}
+.bio__content h5, .bio__content p {
+  text-align: center;
+}
