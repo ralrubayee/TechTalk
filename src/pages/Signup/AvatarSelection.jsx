@@ -3,7 +3,6 @@ import React from 'react'
 
 // Assets
 import bear from '../../assets/avatars/bear.png'
-import cat from '../../assets/avatars/cat.png'
 import deer from '../../assets/avatars/deer.png'
 import fox from '../../assets/avatars/fox.png'
 import koala from '../../assets/avatars/koala.png'
@@ -24,7 +23,6 @@ const AvatarSelection = (props) => {
         <img src={props.formData.avatar} alt="animal-avatar"></img>
         <div className="bottom-ui">
           <select onChange={(e) => props.handleChange(e)} name="avatar" value={props.formData.avatar}>
-            <option value={cat}>Cat</option>
             <option value={bear}>Bear</option>
             <option value={monkey}>Monkey</option>
             <option value={koala}>Koala</option>
