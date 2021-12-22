@@ -21,9 +21,9 @@ const handleSubmit = async (e) =>{
     //navgate??
     props.setMyProfile(editProfile)
     setFormData({
-      bio:"",
-      linkedin:"",
-      github:"",
+      bio:'',
+      linkedin:'',
+      github:'',
     })
   } catch (error) {
     throw error
@@ -58,7 +58,7 @@ const handleSubmit = async (e) =>{
         value={formData.bio}
         onChange={handleChange}
       />
-      <button type="submit">Save Changes</button>
+      <button className="learn-more" type="submit">Save Changes</button>
     </form>
   )
 }

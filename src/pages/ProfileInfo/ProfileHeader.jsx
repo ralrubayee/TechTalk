@@ -13,11 +13,11 @@ console.log('ProfileHeader', props)
   <div className="bio__container">
     <div className="bio__flex">
       <div className="flex__item">
-      <div className="bio__info">
-        <div className="bio__info-flex">
-          <div className="avatar__block">
-            <div className="avatar__container">
-              <img src={props.profile.avatar} alt={props.profile.name} />
+        <div className="bio__info">
+          <div className="bio__info-flex">
+            <div className="avatar__block">
+              <div className="avatar__container">
+                <img src={props.profile.avatar} alt={props.profile.name} />
             </div>
               <span className="name">{props.profile.name}</span>
               </div>
