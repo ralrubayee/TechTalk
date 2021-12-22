@@ -21,11 +21,11 @@ const NavBar = ({ user, handleLogout }) => {
           <div class="menu">
             {user ?
             <>
-              <li><Link to="/profiles">Profiles</Link></li>
-              <li><Link to="/posts">Post</Link></li>
-              <li><Link to="/jobs">Jobs</Link></li>
-              <li><Link to="/profiles/:id">ProfileInfo</Link></li>
-              <li><Link to="" onClick={handleLogout}>LOG OUT</Link></li>
+              <li><Link to="/profiles"><i class="fas fa-user-plus"></i> Add Friends</Link></li>
+              <li><Link to="/posts"><i class="fas fa-users"></i> My Feed</Link></li>
+              <li><Link to="/jobs"><i class="fas fa-info-circle"></i> Jobs</Link></li>
+              <li><Link to="/profiles/:id"><i class="fas fa-user"></i> My Profile</Link></li>
+              <li><Link to="" onClick={handleLogout}><i class="fas fa-sign-out-alt"></i> Logout</Link></li>
             </>
               :
             <>
