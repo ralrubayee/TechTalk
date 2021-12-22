@@ -1,6 +1,6 @@
-section.todo-section {
+/* section.todo-section {
   background-color: rgb(184 186 255)
-}
+} */
 
 .todo-section .container {
   width: 80%;
@@ -59,9 +59,10 @@ section.todo-section {
 
 .todo-section .todo-item {
   padding: 1rem;
-  background-color: #807cbd;
+  /* background-color: #807cbd; */
   border: 2px solid #000;
   border-radius: 8px;
+  
 }
 
 form{
