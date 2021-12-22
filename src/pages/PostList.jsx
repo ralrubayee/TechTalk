@@ -71,7 +71,7 @@ const PostList = (props) => {
           handleUpdatePost ={handleUpdatePost}
           />
 
-        <button onClick={handleClick}> boolean </button>
+        <button onClick={handleClick}> <i class="fas fa-comments"></i></button>
         {boolean?
         <CommentSection
           post={post}
