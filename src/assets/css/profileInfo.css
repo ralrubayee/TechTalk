@@ -64,13 +64,13 @@
 @media (max-width: 950px) {
   .menu { 
     margin-top: 42px;
+    margin-left: 69%;
     display:none;
     position: absolute;
     background-color:rgba(10, 7, 59, 0.877);
     right: 0;
     left: 0;
     text-align: center;
-    padding: 10px 0;
   }
 
   .menu li:hover {
