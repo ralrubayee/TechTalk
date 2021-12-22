@@ -25,9 +25,9 @@ const CreateTodo = (props) => {
         onChange={(e) => setText(e.target.value)}
     />
     <button
-    className="button-add"
+    className="far fa-plus-square"
     type="submit"
-    >Add</button>
+    ></button>
   </form>
   )
 }

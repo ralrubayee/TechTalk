@@ -25,12 +25,14 @@ section.todo-section {
 .todo-section form button {
   padding: .5rem .9rem;
   margin-left: 1rem;
-  border: 1px solid#000;
+  /* border: 1px solid#000; */
   color: #000;
   transition: all .18s linear;
   background-color: #fff;
   cursor: pointer;
-  width: 20%;
+  width: 15%;
+  border-color: transparent;
+  background-color: transparent;
 }
 .todo-section form button:hover {
   background-color: #000;
