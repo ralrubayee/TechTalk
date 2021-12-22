@@ -1,6 +1,7 @@
 import React, {useState , useEffect} from "react";
 
 const ToDo = (props) => {
+  console.log(props.todos._id)
 console.log('this is todo props',props)
   return (
     <div 
@@ -12,7 +13,7 @@ console.log('this is todo props',props)
       <div>
         <button 
         className="button-delete task-button"
-        onClick={()=> props.handleDeleteTodo(props.todos._id) }
+        onClick={()=> props.handleDeleteTodo(props.todo._id) }
         >
         <i className="fa fa-trash"></i>
         </button>
