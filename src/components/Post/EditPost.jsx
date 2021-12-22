@@ -11,7 +11,7 @@ const EditPost = (props) => {
   // const authorId = props.post.added_by._id ? props.post.added_by._id : props.post.added_by
   // const isAuthor = props.user?.profile === authorId
   const [text, setText] = useState({
-    text:''
+    text:props.post.text
   })
   const handleChange=e =>{
     setText({...text, [e.target.name]: e.target.value})
@@ -28,6 +28,7 @@ const EditPost = (props) => {
       throw error
     }
   }
+  console.log('this is text', text)
   return (
     <form className='create-form' onSubmit={handleSubmit}>
       <input
