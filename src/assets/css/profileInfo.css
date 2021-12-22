@@ -1,0 +1,59 @@
+.bio__container {
+  width: 90%;
+  margin: 2rem auto;
+}
+
+.bio__flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bio__flex .flex__item {
+  width: 55%;
+  border: 1px dashed #ddd;
+}
+.bio__flex .flex__item:nth-of-type(2) {
+  width: 45%;
+  margin-left: 1.5rem;
+}
+
+.bio__info-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 1.2rem;
+}
+
+.bio__info .avatar__block {
+  width: 25%;
+}
+.bio__info .text__block {
+  width: 70%;
+}
+.bio__info .avatar__container {
+  width: 70%;
+  margin: auto;
+}
+.bio__info .avatar-container img {
+  display: block;
+  margin: auto;
+}
+
+.bio__info .text__block li.url {
+  list-style-type: none;
+  line-height: 2;
+  font-size: 1.2rem;
+}
+.bio__info .text__block li.url span {
+  font-size: .8rem;
+  color: blue;
+}
+
+
+.bio__content {
+  padding: 1.3rem;
+}
+.bio__content h5, .bio__content p {
+  text-align: center;
+}
