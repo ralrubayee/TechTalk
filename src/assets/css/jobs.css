@@ -1,0 +1,43 @@
+.layout {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  justify-content: center;
+  /* margin: 0;
+  padding: 0;  */
+}
+
+.layout > select {
+  width: 200px;
+  height: 25px;
+  border-radius: 8px;
+  border: 1.5px solid rgb(2, 0, 38);
+  box-shadow: 1px 3px rgb(135, 119, 119), -0.13em 0 .4em rgb(189, 189, 180);
+}
+
+.jobs-list {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border: 2px solid red;
+}
+
+.job-card {
+  width: 300px;
+  display:flex;
+  flex-wrap: wrap;
+  border: 1.5px solid rgb(2, 0, 38);
+  box-shadow: 1px 3px rgb(135, 119, 119), -0.13em 0 .4em rgb(189, 189, 180);
+}
+
+.job-card * {
+  flex-direction: column;
+}
+
+.card-title {
+  color: red
+}
+
+.card-content {
+  color: blue;
+}
