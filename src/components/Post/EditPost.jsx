@@ -24,6 +24,7 @@ const EditPost = (props) => {
       setText({
         text:''
       })
+      props.handleUpdatePost(editPost)
     } catch (error) {
       throw error
     }

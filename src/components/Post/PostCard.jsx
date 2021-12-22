@@ -21,6 +21,7 @@ const PostCard = (props) => {
      {props.user._id = props.post.added_by._id ?
       <EditPost post={props.post} 
       user={props.user}
+      handleUpdatePost={props.handleUpdatePost}
       />
       :''
      }

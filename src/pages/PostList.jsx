@@ -50,6 +50,7 @@ const PostList = (props) => {
           key={post._id}
           user={props.user}
           handleDeletePost={handleDeletePost}
+          handleUpdatePost ={handleUpdatePost}
           />
         <CommentSection
           post={post}
