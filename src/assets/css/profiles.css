@@ -20,7 +20,7 @@
   flex-direction: row;
   width: 100%;
   border: 1.5px solid rgb(2, 0, 38);
-  box-shadow: 1px 3px rgb(103, 92, 92), -0.13em 0 .4em rgb(189, 189, 180);
+  box-shadow: 1px 3px rgb(135, 119, 119), -0.13em 0 .4em rgb(189, 189, 180);
 }
 
 .card-img {

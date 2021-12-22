@@ -28,17 +28,6 @@ section.todo-section {
   /* border-color: white; */
 }
 .todo-section form button {
-  /* padding: .5rem .9rem;
-  margin-left: 1rem;
-  border: 1px solid#000;
-  color: #000;
-  transition: all .18s linear;
-  background-color: #fff;
-  cursor: pointer;
-  width: 15%;
-  border-color: transparent;
-  background-color: transparent; */
-
   position: relative;
   float: right;
   border: 0;
@@ -54,8 +43,8 @@ section.todo-section {
   background-color: rgba(0, 0, 0, 0.55);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.6)
-
 }
+
 .todo-section form button:hover {
   background-color: #000;
   color: #fff;
