@@ -3,13 +3,6 @@ body {
   font-family: 'Slabo 27px', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* display:-webkit-inline-flex; */
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 img {
