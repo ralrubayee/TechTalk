@@ -95,13 +95,15 @@ img {
 @media (max-width: 950px) {
   .menu { 
     margin-top: 42px;
-    margin-left: 69%;
+    margin-left: auto;
     display:none;
     position: absolute;
     background-color:rgba(10, 7, 59, 0.877);
     right: 0;
     left: 0;
     text-align: center;
+    min-width: 180px;
+    max-width: 200px
   }
 
   .menu li:hover {
