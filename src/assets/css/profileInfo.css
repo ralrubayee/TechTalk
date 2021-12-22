@@ -79,7 +79,7 @@ width: 70%;
 padding: 10px 5px;
 background-color: rgba(0, 0, 0, 0.55);
 }
-button{
+.learn-more{
   border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.55);
 }
@@ -110,8 +110,9 @@ button{
     flex-direction: column;
     border: 2px solid rgb(2, 0, 38);
     box-shadow: 5px 5px 10px 2px rgb(0 0 0 / 80%);
-    /* width: 55%; */
     align-items: flex-start;
+    margin: auto;
+
   }
   span.name {
     margin-left: 0.8rem;
@@ -155,7 +156,7 @@ button{
   background-color: rgba(0, 0, 0, 0.55);
   }
 
-  button{
+  .learn-more{
     background-color: #5b4caf; /* Green */
     border: none;
     color: white;
@@ -170,5 +171,10 @@ button{
     border-radius: 8px;
   }
 
+  .bio__flex {
+    border-radius: 10px;
+    border: 2px solid #020026;
+    box-shadow: 5px 5px 10px 2px rgb(0 0 0 / 80%);
+}
 
 }
