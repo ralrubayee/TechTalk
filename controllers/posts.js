@@ -69,7 +69,7 @@ const deletePost = async (req, res) => {
 const createComment = async (req, res) => {
   try {
     req.body.commenter = req.user.profile
-    const post = await Post.findById(req.params.id)
+    const post = await Post.findById(req.params.id).populate("comments.commenter")
     post.comments.push(req.body)
     await post.save()
     const newComment = post.comments[post.comments.length - 1]
@@ -77,7 +77,7 @@ const createComment = async (req, res) => {
     const profile = await Profile.findById(req.user.profile)
     newComment.commenter = profile
 
-    return res.status(201).json(newComment)
+    return res.status(201).json(post)
   } catch (err) {
     res.status(500).json(err)
   }
