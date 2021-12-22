@@ -17,7 +17,7 @@ const PostCard = (props) => {
         <p>{props.post.text}</p>
       </div>
       <div className="comment-dropdown"></div>
-      <button></button>
+     
      {props.user._id = props.post.added_by._id ?
       <EditPost post={props.post} 
       user={props.user}
