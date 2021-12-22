@@ -11,18 +11,18 @@ console.log('ProfileHeader', props)
   return(
   <>
   <section className="bio">
-    <div className="bio__container">
-      <div className="bio__flex">
-        <div className="flex__item">
-          <div className="bio__info">
-            <div className="bio__info-flex">
-              <div className="avatar__block">
-                <div className="avatar__container">
-                <img src={props.profile.avatar} alt={props.profile.name} />
-                </div>
-                <span className="name">{props.profile.name}</span>
+  <div className="bio__container">
+    <div className="bio__flex">
+      <div className="flex__item">
+      <div className="bio__info">
+        <div className="bio__info-flex">
+          <div className="avatar__block">
+            <div className="avatar__container">
+              <img src={props.profile.avatar} alt={props.profile.name} />
+            </div>
+              <span className="name">{props.profile.name}</span>
               </div>
-              <div className="text__block">
+                <div className="text__block">
                 <ul>
                   <li className="url">Github: <span>{props.profile.github}</span></li>
                   <li className="url">LinkedIn: <span>{props.profile.linkedin}</span></li>
@@ -40,13 +40,6 @@ console.log('ProfileHeader', props)
       </div>
     </div>
   </section>
-  {/* <div className= "Bio">
-    <h1>head</h1>
-  <h1>{props.profile.name} <img src={props.profile.avatar} alt={props.profile.name} /></h1>
-  <h1>GitHub: {props.profile.github}</h1>
-  <h1>Bio: {props.profile.bio}</h1>
-  <h1>Linkedin: {props.profile.linkedin}</h1>
-  </div> */}
   </>
   
   )
