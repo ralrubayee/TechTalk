@@ -1,5 +1,5 @@
 section.todo-section {
-  background-color: rgb(250, 229, 40)
+  background-color: rgb(184 186 255)
 }
 
 .todo-section .container {
@@ -46,6 +46,7 @@ section.todo-section {
 
 .todo-section .todo-item {
   padding: 1rem;
-  background-color: #fff;
+  background-color: #807cbd;
   border: 2px solid #000;
+  border-radius: 8px;
 }
