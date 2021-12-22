@@ -23,8 +23,11 @@ console.log('ProfileHeader', props)
               </div>
                 <div className="text__block">
                 <ul>
-                  <li className="url">Github: <span>{props.profile.github}</span></li>
-                  <li className="url">LinkedIn: <span>{props.profile.linkedin}</span></li>
+                  <li className="url">Github: <span> 
+
+                    <a href={props.profile.github}> {props.profile.github} </a> </span>
+                    </li>
+                  <li className="url">LinkedIn: <span> <a href={props.profile.linkedin} > {props.profile.linkedin}</a> </span></li>
                 </ul>
               </div>
             </div>
