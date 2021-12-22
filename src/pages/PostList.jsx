@@ -22,6 +22,11 @@ const PostList = (props) => {
   const handleDeletePost = async (postId) => {
   try {
     await deletePost(postId)
+    const newPostsArray = posts.filter(post => 
+      post._id !== postId 
+    )
+    setPosts(newPostsArray)
+   
   } catch (error) {
     throw error
   }
