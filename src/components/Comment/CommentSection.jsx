@@ -12,8 +12,11 @@ const CommentSection = (props) => {
   const comments = props.post.comments
   const handleCreateComment = async (formData) => {
   try {
-    const newComment = await postService.createComment(props.post._id, formData)
-    props.setComments([...comments, newComment])
+
+    const updatedPost = await postService.createComment(props.post._id, formData)
+    console.log('this is new comment', updatedPost )
+    props.handleUpdatePost(updatedPost)
+   
   } catch (error) {
     throw error
   }
@@ -27,7 +30,7 @@ const handleDeleteComment = async (commentId) => {
     throw error
   }
 }
-
+console.log('comments',comments)
   return (
     <div className="comment-section">
       <div className="header">

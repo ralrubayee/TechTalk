@@ -5,6 +5,7 @@ import EditPost from './EditPost';
 
 
 const PostCard = (props) => {
+  console.log(props.post)
   return (
     <div className="post-card">
       <div className="card-header">

@@ -12,6 +12,13 @@ const PostList = (props) => {
   const [posts, setPosts] = useState([])
   const [comments, setComments] = useState([])
 
+  const handleUpdatePost = async (updatedPost) => {
+    const newPostsArray = posts.map(post => 
+      post._id === updatedPost._id ? updatedPost : post
+    )
+   setPosts(newPostsArray)
+  }
+
   const handleDeletePost = async (postId) => {
   try {
     await deletePost(postId)
@@ -28,7 +35,7 @@ const PostList = (props) => {
     return () => { setPosts([]) } 
   }, [])
 
-  
+  console.log('comments',comments)
   return (
     <div>
       <h1>Posts!</h1>
@@ -50,6 +57,7 @@ const PostList = (props) => {
           user={props.user}
           comments={comments}
           setComments={setComments}
+          handleUpdatePost={handleUpdatePost}
           /> 
       </>
           ))}
