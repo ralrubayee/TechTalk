@@ -83,11 +83,30 @@
   padding: 0;
   background-color: transparent;
   color: white;
-  /* margin-left: auto; */
 }
 #pTag{
   font-size: 16px;
   padding: 20px;
   color: black;
   font-family: 'Slabo 27px', serif;
+}
+
+@media only screen and (min-width: 760px) {
+  textarea{
+  resize: horizontal;
+  min-height:150px;
+}
+  .all-posts {
+  margin-left: 70px;
+}
+.post-form {
+  flex-direction: column;
+  box-shadow: 5px 5px 10px 2px rgb(2, 0, 38);
+  margin-right: 55px;
+  min-width: 450px;
+}
+.create-post{
+  min-width: 400px;
+  margin-right: 5%;
+}
 }
