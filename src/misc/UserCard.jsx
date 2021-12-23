@@ -2,7 +2,6 @@ import React from 'react'
 
 
 const UserCard = (props) => {
-  console.log('UserCard:', props)
   return (
     <div className="user-card">
       <img src={props.profile.avatar} alt="user animal avatar" />

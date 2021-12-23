@@ -7,7 +7,7 @@ const PostForm = (props) => {
         <label>Make A Post</label>
       </div>
       <textarea
-        style={{resize: "vertical", minHeight:"95px"}}
+        // style={{resize: "vertical", minHeight:"95px"}}
         required
         name="text"
         autoComplete='off'
