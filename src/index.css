@@ -67,7 +67,6 @@ img {
   display: flex;
   gap: 1em;
   font-size: 18px;
-  
   border-radius: 10px;
   margin-top: 20px;
 }
@@ -110,19 +109,21 @@ img {
     left: 0;
     text-align: center;
     min-width: 180px;
-    max-width: 200px
+    max-width: 200px;
+    animation: slideInDown;
+    animation-duration: 2s;
   }
-
+  
   .menu li:hover {
     display: inline-block;
     background-color: rgba(30, 28, 63, 0.87);
     transition: 0.3s ease;
   }
-
+  
   .menu li + li {
     margin-top: 12px;
   }
-
+  
   input[type=checkbox]:checked ~ .menu {
     display: block;
   }
