@@ -2,14 +2,11 @@ import React, { useState } from 'react'
 
 
 // Components
-import PostForm from '../../pages/CreatePost/PostForm'
 
 //Services
 import { updatePost } from '../../services/postService'
 
 const EditPost = (props) => {
-  // const authorId = props.post.added_by._id ? props.post.added_by._id : props.post.added_by
-  // const isAuthor = props.user?.profile === authorId
   const [text, setText] = useState({
     text:props.post.text
   })
