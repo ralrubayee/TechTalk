@@ -37,7 +37,6 @@ console.log('comments',comments)
   return (
     <div className="comment-section">
       <div className="header">
-        <h3>Comment Section</h3>
         <div className="header-buttons"></div>
       </div>
       <CreateComment {...props}

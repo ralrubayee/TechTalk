@@ -14,9 +14,6 @@ const CreateComment = (props) => {
   }
   return (
     <form className="create-form" onSubmit={handleSubmit}>
-      <div className="question-prompt">
-        <label>Enter your Comment</label>
-      </div>
       <input
         required
         autoComplete='off'
@@ -25,7 +22,6 @@ const CreateComment = (props) => {
         value={text}
         onChange={(e) => setText(e.target.value)}
       ></input>
-      <div className="border"></div>
       <button type="submit"><i class="fas fa-location-arrow"></i></button>
     </form>
   )
