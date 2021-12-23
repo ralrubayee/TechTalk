@@ -47,6 +47,8 @@
   border: transparent;
   width: 50px;
   color: rgb(2, 0, 38);
+  animation: bounce;
+  animation-duration: 2s;
 }
 
 .card-title > *{
