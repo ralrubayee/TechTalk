@@ -1,9 +1,9 @@
-# <a href='https://ga-tech-talk.herokuapp.com/'>TeckTalk</a>
+# <a href='https://ga-tech-talk.herokuapp.com/'>TechTalk</a>
 
 
 ## Overview
 
-  Techtalk is an app targeted to General Assembly students and alumni that allows them to keep in touch. GA students can interact after graduation and share their knowledge and update eachother about their careers through the app. It also allows GA students to search through jobs and apply, along with giving everyone their own To-Do List. 
+  TechTalk is an app targeted to General Assembly students and alumni that allows them to keep in touch. GA students can interact after graduation and share their knowledge and update eachother about their careers through the app. It also allows GA students to search through jobs and apply, along with giving everyone their own To-Do List. 
 
 
 ## Inspiration
