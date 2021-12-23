@@ -23,6 +23,7 @@ const AvatarSelection = (props) => {
         <img src={props.formData.avatar} alt="animal-avatar"></img>
         <div className="bottom-ui">
           <select onChange={(e) => props.handleChange(e)} name="avatar" value={props.formData.avatar}>
+
             <option value={bear}>Bear</option>
             <option value={monkey}>Monkey</option>
             <option value={koala}>Koala</option>
