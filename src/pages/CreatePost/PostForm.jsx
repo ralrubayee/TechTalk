@@ -2,7 +2,7 @@ import React from 'react'
 
 const PostForm = (props) => {
   return (
-    <form className="create-form" onSubmit={props.handleCreatePost}>
+    <form className="post-form" onSubmit={props.handleCreatePost}>
       <div className="question-prompt">
         <label>Make A Post</label>
       </div>

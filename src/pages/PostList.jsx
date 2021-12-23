@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import '../assets/css/postList.css'
 
 // Services
 import { getAllPosts, deletePost} from '../services/postService'
@@ -7,7 +8,6 @@ import { getAllPosts, deletePost} from '../services/postService'
 import PostCard from '../components/Post/PostCard'
 import CreatePost from './CreatePost/CreatePost'
 import CommentSection from '../components/Comment/CommentSection'
-import { set } from 'mongoose'
 
 const PostList = (props) => {
   const [posts, setPosts] = useState([])
@@ -55,37 +55,39 @@ const PostList = (props) => {
         
   console.log('comments',comments)
   return (
-    <div>
-      <h1>Posts!</h1>
-      <CreatePost user={props.user} 
-      posts={posts}
-      setPosts={setPosts}
-      />
-      {posts?.map((post) => (
-      <>
-        <PostCard
-          post={post}
-          key={post._id}
-          user={props.user}
-          handleDeletePost={handleDeletePost}
-          handleUpdatePost ={handleUpdatePost}
-          />
-
-        <button onClick={handleClick}> <i class="fas fa-comments"></i></button>
-        {boolean?
-        <CommentSection
-          post={post}
-          setPost={setPosts}
-          user={props.user}
-          comments={comments}
-          setComments={setComments}
-          handleUpdatePost={handleUpdatePost}
-          /> 
-          :
-          ''
-        }
-      </>
-          ))}
+    <div className="post-list">
+        <CreatePost user={props.user} 
+        posts={posts}
+        setPosts={setPosts}
+        />
+      <div className="all-posts">
+        {posts?.map((post) => (
+          <div className="post-comment">
+            <div className="post-card-and-button">
+              <PostCard
+                post={post}
+                key={post._id}
+                user={props.user}
+                handleDeletePost={handleDeletePost}
+                handleUpdatePost ={handleUpdatePost}
+              />
+              <button onClick={handleClick}> <i class="fas fa-comments"></i></button>
+            </div>
+            {boolean ?
+              <CommentSection
+                post={post}
+                setPost={setPosts}
+                user={props.user}
+                comments={comments}
+                setComments={setComments}
+                handleUpdatePost={handleUpdatePost}
+              /> 
+              :
+              ''
+            }
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

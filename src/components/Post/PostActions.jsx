@@ -1,5 +1,4 @@
 import React from "react";
-import { updatePost } from "../../services/postService";
 
 const PostActions = (props) => {
   const authorId = props.post.added_by?._id ? props.post.added_by._id : props.post.added_by
@@ -8,7 +7,7 @@ const PostActions = (props) => {
   return (
     isAuthor &&
     <div className="interactions">
-      <button onClick={() => props.handleDeletePost(props.post._id)}>Delete</button>
+      <button onClick={() => props.handleDeletePost(props.post._id)}><i class="far fa-times-circle"></i></button>
     </div >
   )
 }

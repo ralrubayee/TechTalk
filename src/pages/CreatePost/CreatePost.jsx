@@ -27,7 +27,7 @@ const CreatePost = (props) => {
   console.log(props.user.profile)
 
   return (
-    <div className="layout">
+    <div className="create-post">
       <PostForm 
         text={text}
         setText={setText}
