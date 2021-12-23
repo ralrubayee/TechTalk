@@ -32,8 +32,8 @@ const LoginForm = props => {
       onSubmit={handleSubmit}
       className={styles.container}
     >
-      <div className={styles.inputContainer}style={{width:"100%",display:"flex",alignItems:"flex-end"}}>
-        <label htmlFor="email" className={styles.label}>Email</label>
+      <div className={styles.inputContainer}style={{width:"100%", marginLeft:"50px"}}>
+        <label htmlFor="email" className={styles.label} style={{textAlign:"left"}}>Email</label>
         <input
         style={{width:"200px"}}
         className='signUp-input'
@@ -45,7 +45,7 @@ const LoginForm = props => {
         onChange={handleChange}
         />
       </div>
-      <div className={styles.inputContainer} style={{width:"100%", display:"flex",alignItems:"flex-end"}}>
+      <div className={styles.inputContainer} style={{width:"100%"}}>
         <label htmlFor="password" className={styles.label}>Password</label>
         <input
           style={{width:"200px"}}
