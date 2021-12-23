@@ -15,29 +15,27 @@ const PostCard = (props) => {
         }
   return (
     <div className="post-card">
-      <div className="card-header">
-        <PostActions {...props} />
-        <img src ={props.post.added_by.avatar} alt={props.post.added_by.name}/>
+      <div className="post-user-card">
+        <img className="post-user-img" src ={props.post.added_by.avatar} alt={props.post.added_by.name}/>
         <h3>{props.post.added_by.name}</h3>
+        <PostActions {...props} />
+        {props.user.profile === props.post.added_by._id ?
+          <>
+          <button onClick={()=> handleClick()}><i class="fas fa-edit"></i></button>
+        
+        </>
+        :''
+      }
       </div>
-      <div className="text">
+      <div className="post-text">
         <p>{props.post.text}</p>
       </div>
-      <div className="comment-dropdown"></div>
-      {props.user.profile === props.post.added_by._id ?
-      
-      <>
-      <button onClick={()=> handleClick()}>edit</button>
-    
       {boolean ? 
-      <EditPost post={props.post} 
-      user={props.user}
-      handleUpdatePost={props.handleUpdatePost}
-      />
-      
-      :''
-}
-     </>
+        <EditPost 
+          post={props.post} 
+          user={props.user}
+          handleUpdatePost={props.handleUpdatePost}
+        />
       :''
       }
     </div>
