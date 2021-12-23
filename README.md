@@ -11,6 +11,12 @@
   - As a recent graduate, keeping up with the job search might be difficult. To assist them, our team designed a job page that displays tech and software positions. 
   - As Software Engineers we can get pretty busy and forget our other responsibilities, our app provides a to-do list to help Software Engineers stay organize throughout their job search and thoughts. 
 
+## Images
+![Screen Shot 2021-12-22 at 11 26 32 PM](https://user-images.githubusercontent.com/90650175/147211763-17cf82a1-03d3-455c-a38b-a328a74a3616.png)
+![Screen Shot 2021-12-23 at 3 32 49 AM](https://user-images.githubusercontent.com/90650175/147212110-24edb581-6c6c-4204-9311-b472681393d4.png)
+
+![Screen Shot 2021-12-22 at 11 39 44 PM](https://user-images.githubusercontent.com/90650175/147211762-bfc31f31-cf46-4339-a152-c32f866469e0.png)
+
 
 ## Planning
   -  <a href='https://trello.com/b/B2rZsNuh/techtalk'>Trello board</a>
