@@ -1,3 +1,7 @@
+/* #root{
+  background-image: linear-gradient(to right top, #8b496f, #784570, #63416f, #4e3e6c, #373a66, #2b426d, #1b4a73, #005176, #006786, #007e93, #27949d, #49aaa4);
+} */
+
 
 ul {
   padding: 0 0 0 .4rem;
@@ -66,7 +70,7 @@ ul {
 .url {
   padding: 0px;
 }
-input{
+.bio-2{
   color: white;
 padding: .5rem 1.2rem;
 border: 1px solid white;
@@ -77,37 +81,6 @@ width: 70%;
 padding: 10px 5px;
 background-color: rgba(0, 0, 0, 0.55);
 }
-
-/* .learn-more:hover {
-  box-shadow: 4px 4px 0 #000;
-  transform: translate(-4px,-4px);
-}
-:focus-visible{
-  outline-offset: 1px;
-}
-
-.learn-more {
-  size: 30px;
-  outline: 0;
-  grid-gap: 8px;
-  align-items: center;
-  background: 0 0;
-  border: 1px solid #000;
-  border-radius: 4px;
-  cursor: pointer;
-  display: inline-flex;
-  flex-shrink: 0;
-  font-size: 16px;
-  gap: 8px;
-  justify-content: center;
-  line-height: 1.5;
-  overflow: hidden;
-  padding: 12px 16px;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  transition: all .14s ease-out;
-  white-space: nowrap;
-} */
 
 .learn-more:hover {
   background: rgb(2, 0, 38);;
@@ -177,6 +150,7 @@ background-color: rgba(0, 0, 0, 0.55);
     display: flex;
     width: 90%;
     margin: 2rem auto;
+    
   }
 
   .bio__content {
@@ -191,10 +165,11 @@ background-color: rgba(0, 0, 0, 0.55);
   }
   
   P{
-    margin: 0px;
+    margin: auto;
+    margin: -10px;
   }
 
-  input{
+  .linkedin{
     color: white;
   padding: .5rem 1.2rem;
   border: 1px solid white;
@@ -206,11 +181,12 @@ background-color: rgba(0, 0, 0, 0.55);
   background-color: rgba(0, 0, 0, 0.55);
   }
 
+
+
   .learn-more{
     background-color: #5b4caf; /* Green */
     border: none;
     color: white;
-    padding: 16px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -229,4 +205,9 @@ background-color: rgba(0, 0, 0, 0.55);
     box-shadow: 5px 5px 10px 2px rgb(0 0 0 / 80%);
 }
 
+.button-delete{
+  align-items: top ;
+  margin-left: 100px;
+  align-items: flex-end;
+}
 }

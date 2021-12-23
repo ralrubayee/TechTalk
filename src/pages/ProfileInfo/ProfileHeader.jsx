@@ -9,6 +9,7 @@ console.log('ProfileHeader', props)
 
   return(
   <>
+  <div className='body'>
   <section className="bio">
   <div className="bio__container">
     <div className="bio__flex">
@@ -42,6 +43,7 @@ console.log('ProfileHeader', props)
       </div>
     </div>
   </section>
+  </div>
   </>
   
   )

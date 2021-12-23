@@ -5,7 +5,7 @@ const Form = (props) => {
     props.setInput(event.target.value);
   }
 
- 
+
 return (
   <div>
     <form onSubmit={props.handleSubmit}>

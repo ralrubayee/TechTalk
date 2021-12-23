@@ -32,7 +32,7 @@ const handleSubmit = async (e) =>{
   return(
     
     <form className='create-form' onSubmit={handleSubmit}> 
-      <input
+      <input className='linkedin'
         type="text"
         name="linkedin"
         autoComplete='off'
@@ -41,7 +41,7 @@ const handleSubmit = async (e) =>{
         onChange={handleChange}
       />
         
-      <input
+      <input className='linkedin'
         type="text"
         name="github"
         autoComplete='off'
@@ -50,7 +50,7 @@ const handleSubmit = async (e) =>{
         onChange={handleChange}
       />
       
-      <input
+      <input className='bio-2'
         type="text"
         name="bio"
         autoComplete='off'

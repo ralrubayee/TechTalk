@@ -10,15 +10,17 @@ console.log('this is todo props',props)
       <p>
     { props.todo.todo_text}
       </p>
-      <div>
+    
         <button 
         className="button-delete task-button"
+        id="delete-button"
         onClick={()=> props.handleDeleteTodo(props.todo._id) }
         >
         <i className="fa fa-trash"></i>
         </button>
+
       </div>
-    </div>
+  
   )
 }
 
