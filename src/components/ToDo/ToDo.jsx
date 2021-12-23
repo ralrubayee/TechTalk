@@ -1,8 +1,6 @@
-import React, {useState , useEffect} from "react";
+import React from "react";
 
 const ToDo = (props) => {
-  console.log(props.todos._id)
-console.log('this is todo props',props)
   return (
     <div 
     className="todo-item" 

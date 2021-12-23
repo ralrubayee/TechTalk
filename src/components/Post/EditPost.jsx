@@ -29,7 +29,6 @@ const EditPost = (props) => {
       throw error
     }
   }
-  console.log('this is text', text)
   return (
     <form className='create-form' onSubmit={handleSubmit}>
       <textarea

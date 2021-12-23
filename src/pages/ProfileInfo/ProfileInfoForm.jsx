@@ -1,16 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import * as profileService from "../../services/profileService"
 
 
 
 const ProfileInfoForm=(props) =>{
-  console.log('profile1',props)
   const [formData, setFormData] = useState({
     bio:"",
     linkedin:"",
     github:"",
   })
-  console.log('formData', formData)
   const handleChange = evt =>{
     setFormData({...formData, [evt.target.name]: evt.target.value})
   }

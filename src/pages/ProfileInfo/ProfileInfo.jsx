@@ -8,7 +8,6 @@ import ProfileInfoForm from "./ProfileInfoForm"
 
 
 const ProfileInfo = (props) => {
-console.log('this is props from profile info', props)
   const [myProfile, setMyProfile] = useState({})
 
   useEffect(()=>{
@@ -19,7 +18,6 @@ console.log('this is props from profile info', props)
     }
     getProfile()
   },[props.user.profile])
-console.log('my profile', myProfile)  
   return(
       <>
 

@@ -49,11 +49,9 @@ const PostList = (props) => {
           setBoolean(false)
           :
           setBoolean(true)
-          console.log('this is boolean',boolean)
           return
         }
         
-  console.log('comments',comments)
   return (
     <div className="post-list">
         <CreatePost user={props.user} 

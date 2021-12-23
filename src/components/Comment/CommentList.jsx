@@ -4,7 +4,6 @@ import React from "react"
 import CommentCard from './CommentCard'
 
 const CommentList = (props) => {
-  console.log('this props.commen', props.comments)
   return (
     props.comments?.map((comment) => (
       <CommentCard
