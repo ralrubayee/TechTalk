@@ -34,14 +34,12 @@
   flex-direction: row;
   width: 100%;
   align-items: center;
-  justify-items: center;
   justify-content: center;
-  align-content: center;
   text-align: center;
+  margin: 1px;
 }
 
 .job-title {
-  /* color: red; */
   font-size: 18px;
   min-height: 65px;
   font-weight: bold;
@@ -49,6 +47,7 @@
 
 .job-content {
   max-height: 12px;
+  margin-top: 2px;
 }  
 
 * > .job-button {
