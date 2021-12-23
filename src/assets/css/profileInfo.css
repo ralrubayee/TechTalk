@@ -1,3 +1,7 @@
+/* #root{
+  background-image: linear-gradient(to right top, #8b496f, #784570, #63416f, #4e3e6c, #373a66, #2b426d, #1b4a73, #005176, #006786, #007e93, #27949d, #49aaa4);
+} */
+
 
 ul {
   padding: 0 0 0 .4rem;
@@ -177,6 +181,7 @@ background-color: rgba(0, 0, 0, 0.55);
     display: flex;
     width: 90%;
     margin: 2rem auto;
+    
   }
 
   .bio__content {
