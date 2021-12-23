@@ -32,6 +32,14 @@ const handleSubmit = async (e) =>{
   return(
     
     <form className='create-form' onSubmit={handleSubmit}> 
+        <input className='linkedin'
+          type="text"
+          name="github"
+          autoComplete='off'
+          placeholder='github'
+          value={formData.github}
+          onChange={handleChange}
+        />
       <input className='linkedin'
         type="text"
         name="linkedin"
@@ -41,23 +49,15 @@ const handleSubmit = async (e) =>{
         onChange={handleChange}
       />
         
-      <input className='linkedin'
-        type="text"
-        name="github"
-        autoComplete='off'
-        placeholder='github'
-        value={formData.github}
-        onChange={handleChange}
-      />
+        <input className='bio-2'
+          type="text"
+          name="bio"
+          autoComplete='off'
+          placeholder='bio'
+          value={formData.bio}
+          onChange={handleChange}
+        />
       
-      <input className='bio-2'
-        type="text"
-        name="bio"
-        autoComplete='off'
-        placeholder='bio'
-        value={formData.bio}
-        onChange={handleChange}
-      />
       <button className="learn-more" type="submit">Save Changes</button>
     </form>
   )
