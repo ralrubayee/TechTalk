@@ -23,8 +23,6 @@ const index = async (req, res) => {
       .populate('added_by')
       .populate('comments.commenter')
       .sort({ createdAt: 'desc' })
-      console.log("POST", posts)
-
     return res.status(200).json(posts)
   } catch (err) {
     return res.status(500).json(err)
@@ -36,7 +34,6 @@ const index = async (req, res) => {
     const post = await Post.findById(req.params.id)
       .populate('added_by')
       .populate('comments.commenter')
-      console.log("POST", post)
     return res.status(200).json(post)
   } catch (err) {
     return res.status(500).json(err)
@@ -90,10 +87,8 @@ const deleteComment = async (req, res) => {
     post.comments.remove({ _id: req.params.commentId })
 
     await post.save()
-    console.log(post)
     return res.status(200).json(post)
   } catch (err) {
-    console.log(err)
     res.status(500).json(err)
   }
 }

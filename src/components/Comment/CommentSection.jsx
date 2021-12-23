@@ -12,11 +12,8 @@ const CommentSection = (props) => {
   const comments = props.post.comments
   const handleCreateComment = async (formData) => {
   try {
-
     const updatedPost = await postService.createComment(props.post._id, formData)
-    console.log('this is new comment', updatedPost )
     props.handleUpdatePost(updatedPost)
-   
   } catch (error) {
     throw error
   }
@@ -25,15 +22,11 @@ const CommentSection = (props) => {
 const handleDeleteComment = async (commentId) => {
   try {
     const updatedPost = await postService.deleteComment(props.post._id, commentId)
-    // props.setComments(comments.filter(comment => comment._id !== commentId))
-    console.log(updatedPost)
     props.handleUpdatePost(updatedPost)
   } catch (error) {
     throw error
   }
 }
-
-console.log('comments',comments)
   return (
     <div className="comment-section">
       <div className="header">

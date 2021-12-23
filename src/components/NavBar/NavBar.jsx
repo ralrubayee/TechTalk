@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom'
 import logo from '../../assets/images/conversation.png'
 
 const NavBar = ({ user, handleLogout }) => {
-  console.log(user)
   return (
     <>
     <header id="page-header">

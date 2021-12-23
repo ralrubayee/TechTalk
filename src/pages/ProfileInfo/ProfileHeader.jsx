@@ -1,11 +1,7 @@
 import React from 'react'
-import Link from "react-router-dom"
-
-
 
 
 const ProfileHeader=(props) =>{
-console.log('ProfileHeader', props)
 
   return(
   <>

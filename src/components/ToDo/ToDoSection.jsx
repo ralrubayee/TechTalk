@@ -8,9 +8,6 @@ import * as profileService from '../../services/profileService'
 
 const ToDoSection = (props)=> {
   const [todos , setTodos] = useState([])
-
-  console.log('props.profile.tosos', props.profile.todos)
-
   const handleCreateTodo = async (formData) => {
     try {
       const newTodo = await profileService.createTodo(formData)

@@ -4,7 +4,6 @@ function index(req, res) {
   Profile.find({})
   .then(profiles => res.json(profiles))
   .catch(err => {
-    console.log(err)
     res.status(500).json(err)
   })
 }
@@ -20,7 +19,6 @@ const show = async (req, res) => {
 }
 
 const updateProfile =  async (req,res) =>{
-  console.log("hey you !!!!", req.body)
   try{
     const profile = await Profile.findByIdAndUpdate(
       req.user.profile, 

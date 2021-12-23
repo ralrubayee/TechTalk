@@ -12,7 +12,6 @@ export const getAllPosts = async () => {
 }
 
 export const createPost = async (post) => {
-	console.log('post srvive', post)
   try {
     const res = await fetch(BASE_URL, {
       method: "POST",
@@ -95,11 +94,9 @@ export const deleteComment = async (postId, commentId) => {
 				Authorization: 'Bearer ' + tokenService.getToken(),
 			},
 		});
-		console.log(res)
 		const data = await res.json();
 		return data;
 	} catch (error) {
-		console.log(error)
 		throw error;
 	}
 };
