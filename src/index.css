@@ -4,6 +4,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   margin:auto;
   width:100%;
+  z-index: -10;
   padding-top: 180px;
 }
 
@@ -36,6 +37,7 @@ img {
   height: 100px;
   color: white;
   padding-left: 25px;
+  z-index: 5;
 
 }
 
