@@ -82,7 +82,7 @@ const SignupForm = props => {
         />
       </div>
       <div className={styles.inputContainer}>
-        <label htmlFor="password" className={styles.label}>Password</label>
+        <label htmlFor="password" className={styles.label} style={{marginRight:"20px"}}>Password</label>
         <input
           type="password"
           autoComplete="off"
@@ -93,7 +93,7 @@ const SignupForm = props => {
         />
       </div>
       <div className={styles.inputContainer}>
-        <label htmlFor="confirm" className={styles.label}>
+        <label htmlFor="confirm" className={styles.label}style={{marginRight:"20px", marginLeft:'91px'}}>
           Confirm Password
         </label>
         <input
@@ -109,6 +109,7 @@ const SignupForm = props => {
           id="avatar-button"
           autoComplete="off"
           onClick={handlePopup}
+          style={{marginLeft:"20px"}}
         >Select Avatar</button>
       </div>
       <div className={styles.inputContainer}>
