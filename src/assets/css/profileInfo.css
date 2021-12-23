@@ -70,6 +70,20 @@ ul {
 .url {
   padding: 0px;
 }
+.linkedin{
+  color: white;
+padding: .5rem 1.2rem;
+border: 1px solid white;
+border-radius: 8px;
+margin: .5rem auto;
+display: inline-block;
+width: 70%;
+padding: 10px 5px;
+border: 1px solid #b7a4a4;
+display: block;
+margin-right: 1.3rem;
+}
+
 .bio-2{
   color: white;
 padding: .5rem 1.2rem;
@@ -79,7 +93,9 @@ margin: .5rem auto;
 display: inline-block;
 width: 70%;
 padding: 10px 5px;
-background-color: rgba(0, 0, 0, 0.55);
+border: 1px solid #b7a4a4;
+display: block;
+/* margin-right: 1.3rem; */
 }
 
 .learn-more:hover {
@@ -170,7 +186,7 @@ background-color: rgba(0, 0, 0, 0.55);
   }
 
   .linkedin{
-    color: white;
+  color: rgb(0, 0, 0);
   padding: .5rem 1.2rem;
   border: 1px solid white;
   border-radius: 8px;
@@ -178,7 +194,8 @@ background-color: rgba(0, 0, 0, 0.55);
   display: inline-block;
   width: 70%;
   padding: 10px 5px;
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: transparent;
+  border: 1px solid #b7a4a4;
   }
 
 
