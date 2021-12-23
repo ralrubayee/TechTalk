@@ -2,6 +2,7 @@ import styles from '../../pages/Landing/Landing.css'
 import myFeed from  '../../assets/images/one.png'
 import job from  '../../assets/images/job.png'
 import myprofile from  '../../assets/images/myprofile.png'
+import comment from '../../assets/images/comment.png'
 const Landing = ({ user }) => {
   return (
     <main className={styles.container}>
@@ -26,6 +27,13 @@ const Landing = ({ user }) => {
           <img src={myprofile} alt="myprofile" className='image'/>
         <div class="overlay">
         <p className='class="text'>My profile is the place where the user can edit their info. The user also has acces to add a todo list.</p>
+        </div>
+      </div>
+
+      <div class="not">
+          <img src={comment} alt="comment" className='image'/>
+        <div class="overlay">
+        <p className='class="text'>The My Feed page is a page where the community can come togther and post and comment on each others stuff.</p>
         </div>
       </div>
 
