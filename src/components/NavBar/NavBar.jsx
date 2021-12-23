@@ -9,7 +9,6 @@ const NavBar = ({ user, handleLogout }) => {
       <nav className="navbar">
         <div class="logo">
         <Link to ="/">
-
             TechTalk<img 
               src={logo} 
               alt="TechTalk Logo"
