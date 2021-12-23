@@ -31,6 +31,7 @@
   - <a href='https://fonts.google.com/specimen/Slabo+27px?category=Serif,Sans+Serif,Display&stylecount=1&width=6'>Google Fonts</a>
   - <a href='https://www.freepik.com'>Flaticon</a>
   - <a href='https://fontawesome.com/'>Font Awesome</a>
+  - <a href='https://animate.style/'>Animate CSS</a>
 
 ## Future Plans:
   - AAU, I would like to see all the friends that I have added in the past.
