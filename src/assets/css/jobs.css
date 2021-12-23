@@ -53,6 +53,7 @@
 
 * > .job-button {
   margin-bottom: 0;
+  text-decoration: none;
 }
 
 .job-button {
@@ -63,4 +64,11 @@
 
 .jobs-list > :hover{
   box-shadow: rgba(43, 32, 255, 0.09) 0px 2px 1px, rgba(29, 29, 213, 0.09) 0px 4px 2px, rgba(50, 23, 206, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  background-color: rgba(46, 20, 191, 0.913);
+  border: 1.5px solid rgb(14, 49, 250);
+  color: white;
+}
+
+.jobs-list > * :hover {
+  color: white
 }
