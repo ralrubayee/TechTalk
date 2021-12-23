@@ -8,11 +8,14 @@ const NavBar = ({ user, handleLogout }) => {
     <header id="page-header">
       <nav className="navbar">
         <div class="logo">
+        <Link to ="/">
             TechTalk<img 
               src={logo} 
               alt="TechTalk Logo"
               id="logo-img"
               /> 
+          </Link>
+
         </div>
         <ul class="nav-links">
           <input type="checkbox" id="checkbox_toggle" />

@@ -36,6 +36,7 @@ img {
   height: 100px;
   color: white;
   padding-left: 25px;
+
 }
 
 .nav-links a {
@@ -47,14 +48,17 @@ img {
 .nav-links {
   list-style: none;
   margin-right: 30px;
+  text-decoration: none;
 }
 
 .logo {
   font-size: 38px;
+  text-decoration: none;
 }
 
 .logo * {
-  color: white
+  color: white;
+  text-decoration: none;
 }
 
 .menu {
@@ -85,6 +89,7 @@ img {
 
 #logo-img {
   width: 45px;
+  text-decoration: none;
 }
 
 #checkbox_toggle {
@@ -123,4 +128,5 @@ img {
   .hamburger {
     display: block;
   }
+
 }

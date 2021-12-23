@@ -33,7 +33,6 @@ const ToDoSection = (props)=> {
     setTodos(props.profile.todos)
   }, [props.profile.todos])
 
-
   return (
     <section className="todo-section">
       <div className="container">
@@ -47,7 +46,6 @@ const ToDoSection = (props)=> {
       {todos && 
       <TodoList todos={todos}
       handleDeleteTodo={handleDeleteTodo} />
-      
       }
       </div>
       
