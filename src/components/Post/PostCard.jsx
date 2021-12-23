@@ -21,14 +21,14 @@ const PostCard = (props) => {
         <PostActions {...props} />
         {props.user.profile === props.post.added_by._id ?
           <>
-          <button onClick={()=> handleClick()}><i class="fas fa-edit"></i></button>
+          <button calssName="comment-btn"  id='btn' onClick={()=> handleClick()}><i class="fas fa-edit"></i></button>
         
         </>
         :''
       }
       </div>
       <div className="post-text">
-        <p>{props.post.text}</p>
+        <p id="pTag">{props.post.text}</p>
       </div>
       {boolean ? 
         <EditPost 
