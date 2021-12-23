@@ -37,7 +37,7 @@ console.log('ProfileHeader', props)
         <div className="flex__item">
           <div className="bio__content">
             <h5>Bio:</h5>
-            <p>{props.profile.bio}</p>
+            <p className='people'>{props.profile.bio}</p>
           </div>
         </div>
       </div>
