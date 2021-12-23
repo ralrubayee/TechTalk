@@ -7,7 +7,7 @@ const PostActions = (props) => {
   return (
     isAuthor &&
     <div className="interactions">
-      <button onClick={() => props.handleDeletePost(props.post._id)}><i class="far fa-times-circle"></i></button>
+      <button id="btn" onClick={() => props.handleDeletePost(props.post._id)}><i class="far fa-times-circle"></i></button>
     </div >
   )
 }

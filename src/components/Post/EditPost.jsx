@@ -32,7 +32,8 @@ const EditPost = (props) => {
   console.log('this is text', text)
   return (
     <form className='create-form' onSubmit={handleSubmit}>
-      <input
+      <textarea
+        className='input-bar'
         type="text"
         name="text"
         autoComplete='off'
@@ -40,7 +41,7 @@ const EditPost = (props) => {
         value={text.text}
         onChange={handleChange}
       />
-      <button type="submit">Save Changes</button>
+      <button className='submit-btn' type="submit">Save</button>
     </form>
 
   )
