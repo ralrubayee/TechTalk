@@ -57,6 +57,7 @@
   height: 20px;
   overflow: hidden;
   padding-right: 15px;
+  margin-right: auto;
 }
 
 .post-prompt{
@@ -82,7 +83,7 @@
   padding: 0;
   background-color: transparent;
   color: white;
-  margin-left: auto;
+  /* margin-left: auto; */
 }
 #pTag{
   font-size: 16px;
